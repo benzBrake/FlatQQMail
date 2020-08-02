@@ -491,13 +491,17 @@ textarea.txt,
   }
 
   /* Toolbar */
+  .toolheight {
+    position: fixed !important;
+    height: var(--toolbar-height) !important;
+  }
+
   .toolbgline {
     background: var(--toolbar-background);
-    position: fixed !important;
     top: 0;
     left: 0;
     right: 0;
-    height: var(--toolbar-height);
+    height: 35px;
     padding: 0;
     z-index: 9 !important;
     border: 2px solid var(--toolbar-border-color);
