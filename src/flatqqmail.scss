@@ -1,0 +1,246 @@
+/* ==UserStyle==
+@name           FlatQQMail
+@name:zh        QQ 邮箱个性化样式
+@namespace      github.com/benzbrake/FlatQQMail
+@version        2.0.1
+@description    Flat Style For QQMail
+@author         Ryan
+@var text login-background "Login Page Background" url(https://area.sinaapp.com/bingImg?daysAgo=2)
+@var text left-panel-width "Left Sidebar Width" 190px
+==/UserStyle== */
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document domain("mail.qq.com") {
+    html {
+        --main-color                    : #0078d4;
+        --main-text-color               : #fff;
+        --navbar-height                 : 60px;
+        --search-background             : rgba(255, 255, 255, .7);
+        --search-hover-background       : #fff;
+        --search-border-color           : #c7e0f4;
+        --left-panel-background         : #f3f2f1;
+        --left-panel-hover              : #edebe9;
+        --left-panel-active             : #c7e0f4;
+        --left-panel-active-text-color  : #005a9e;
+        --left-panel-text-color         : #323130;
+        --left-panel-border-color       : #edebe9;
+        --toolbar-background            : #f3f2f1;
+        --toolbar-height                : 44px;
+        --toolbar-border-color          : #edebe9;
+        --panel-background-color        : #C7E0F4;
+        --panel-border-color            : #edebe9;
+        --panel-text-color              : #323130;
+        --panel-white-background-color  : #fff;
+        --panel-white-border-color      : #d0d0d0;
+        --panel-gray-background-color   : #faf9f8;
+        --btn-background                : #f3f2f1;
+        --btn-hover-background          : #edebe9;
+        --btn-text-color                : #004578;
+        --btn-border-color              : #edebe9;
+        --btn-primary-background        : #0078d4;
+        --btn-primary-text-color        : #fff;
+        --btn-primary-hover-background  : #005a9e;
+        --btn-secondary-background      : #eff6fc;
+        --btn-secondary-hover-background: #deecf9;
+        --btn-secondary-text-color      : #005a9e;
+        --link-color                    : #2672ec;
+        --icon-search                   : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAv0lEQVQ4jc2SwQ2DMAxFGYEROEb6z1JG6AgdgREYgQ0YoSMwQkbICIzACPTi9IAIoKqH+hTF/vb3/26av4sYYwuMQAZWYJY03AJL6h2UzWyS1JvZBGxADiF0VXAIoQNWM5tijO0BqwykagOfuOzBuwGbpP6wQaF9seICjNXklVgu6KuWTHcYVGvcurWmtKTB3XicUcxAlhR34I+9ZwyL0qn47u9yUNlduD4qM3v6SjMwFkb+V7fyThStvm7w83gDIMhQYknIEDsAAAAASUVORK5CYII=);
+        --icon-wireless                 : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAtUlEQVQ4jd2SYQ3FIAyEkYCESZgEJCBhEiYBB0hAwiRMwiRMAhK+/XjH0nRvAt5rQtJej2tzEML/BLC84LOrI5AfJKB7EZGbwxKfmC24A7vyavAGbEasKN+A0wp0IOugKSMfApNqy4tjfUQowKFph/BTmyRt2tQHSF6g6mLSml29rkubE8jBFIs3SOTRG0Znw5u+mViA+GJiNSYe1sTbIPdklec/uI32f2Edk61wcKFNVo//cFxsZm+SzPAjvgAAAABJRU5ErkJggg==);
+        --icon-star                     : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA80lEQVQ4jbWSwW2FMBBEpwRKoARKSAkpgRJ8wbtHOnAJlEAJlLASHp8pwSWQAyR8fj5OgpS92NJq386MDfxr6dzC090b7lIDYYZyRZeaG9s5QGMPYYCk8Y/DVm/brYazCsoVanVZrqeDMEA5QblAY38AYw9hhqQRGnvo3J6BygXKCcIAT/fSs5/f4el2mEGYj+a2eflVWF1qoFwgDOeGMECYi5DL4cPKAKFdAj5tFjecvD3VTwqhc3tS4Kx6Alj5Z3o6KAc4q76CVa7b3ertfHje7xLTuIeUoZzQpWYPbthBVv6VGt+gHF763PIJ0Lm9BtyoD2Y3oxhUL8HuAAAAAElFTkSuQmCC);
+        --icon-unstar                   : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAvElEQVQ4jbWSwQ2DMBAEtwRKSAmUkBIoISX4g++edEAJlEAJLsESrN+UQAnJA4JCgsEgZaX92No5++6Av8n4DEoHpYPx2XmA9hWUz9nN+erCcQEIR6i/pYfX1d+Qeu+5dygdhH5VedsDJLSwXfEB4HAQ2vYiCe0FwFdjp5GlhYV+e7QpkGgYAGxXHAIsTXwalub4C30VB6Q0U0K7A6BfbZ+whrD+6UFU2j3mRXIoQ76clyGHspnuukcccEEvoT4gV5LOlygAAAAASUVORK5CYII=);
+        --icon-edit                     : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAv0lEQVRIie2UYQ3DIBBGK6ESKgEJSJgUJOBgEpAwCZNQCUhAwtsfyAgpHLsmy5LuS/jV63t3XNNl+ecbAQywA14qtIADvHBM9c4GRN7pS5rCXu5N5x4I1fM0EgCEyWupOy+SBNwkQX/EY3iJq69OLQDWvNA6EdikxkTBKbgkmIEDq0qQ4Y8GvjdwJ+7vSDADl6aXBCJcLcjdi/AzAlvBn6MlagUmS8Zfh1bwSX5KEJF/1+0Js4JSqEkCrGb6i+cFOBKaSL4ZmCkAAAAASUVORK5CYII=);
+        --icon-receive                  : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAi0lEQVRIie3UXQ2AIBSGYSMQgQhGMAJRjGAjIxjBCEYgwuuFsjkm7Bx+7nhvle/Z1DlNI2nATr4TMDWApHIkLCSumXdc2qECShA1IG0AA6gDAKuX5eMzcHUBgAXw2fOlAODCeHMAWL/jcS2ALTWeBCRF51xyNLqx+E/J85LVT0AVz2fquwEvYrsCf92tlzD9U+HLQgAAAABJRU5ErkJggg==);
+        --icon-contacts                 : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABOElEQVRIid2UsW2GMBCF/xE8AiN4BEZgBIoM4AkiNmAERmAEyr9kgBQoSpGSOtWXIs/KCWyC/9AklpB83Pm9e3dn327/fgEOaICgr7oSvAZW9itcBQ4wA15KamDU//a3BJOydwe+SvYu5ifwSll2GX8jfyM7xP1ZgtoCJPzOJgB0uWRyBP6ozkZhK3ssVRAzHDL+sCnRUjy+wCCQevPfq8GTIZuKwI2KOSoRUCfwVX16Bt4fmaI48wF4MRfsQ4C9/E/AXb7xLLg3maP6LsAb8Kp9XKvpQ69zeTV8zXcsQTgKVmxMpDUkaSWm5kUTwffT4WUvyZFVA3dTc4LASfEgu02qUCZzCbg52wOr9j7ut0ELmYt1gqCV+ioqSgUB9A8SxMfP9sFtgy4jyAX1pQ02Z53Ol93oP7E+AVmOV2PqRK2HAAAAAElFTkSuQmCC);
+        --icon-profile                  : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA8ElEQVQ4ja1SwQ3DIAy8ETJCR+gIGSEjdAQ+BT+7QUfICBkhIyDB8c4IHYE+aNJQHKmVaskSNvh82Af81YzvILGHDYPqEnsY3+nF13SGcIFwhkuT6sIZwgxL0wIIZ/1CY8kM8ad30vEOYYbj/Q3oT4UNH1UeQGETLp8MalSXJki8QWJfqO8KhKMOUMcLrulczvEG4XgMULpk2DBUjxx9mT6X5u5LgMc2+Z++YMMAR7/tvKw4b3EDsK6m6p6mWkScN4YNgKWp1iixV4V0yKAklzapmPFdmc1eSGtXYX5JdlTdpUkVVmU2DJBwOfRVG/+yJ+El7HPQij/5AAAAAElFTkSuQmCC);
+        --icon-read                     : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAyElEQVQ4jcWSQbHDMAxEDaEQCiEQCiEQCqEQetPs08EQPoRAKARDKIRAcC/K1PObuL5VMzpJet6VnFIncs6nXr0bwBVYgQpchwfN7AIUYHX3LOkekAJMXbnunuPVR9sMTMACVHfPH9Yauauk2xdbT6BKmtvCH1BGlxYKl/+AZbOxB9pqbf8HwMzOIfG5s4MSNqdDwPZSSKyS5rjKChQzO3cVtJLjIjWGl9bWECCllCTd9nYyDDiKI0CRNI9kfKo3oPE7nNtJfx8v4dADOEfYAroAAAAASUVORK5CYII=);
+        --icon-unread                   : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAuUlEQVQ4jd2SvRGDMAyFNYJHyAiMwAgp8aPxCGzCCBmBHiJ7BEbwCC4goiRNSCD8hbukybtToyd9eoWI/kPCKITRH6mOcRkDemH4tkS0d6wtEQnDC6OfAG5XfRZGaKok3ltuGWYGICJqqiQeYO/LjwN+8BYB04g6e/k6E4Yfp1sFEBEFZ5RY1MJpLpzmYlF3LjmNZzYBz77VTqx2wRk18z4BbOn7gKWYawrOqCnAanf0E4VRHE39G90BhIreKURRbZ0AAAAASUVORK5CYII=);
+        --icon-open                     : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAjUlEQVQ4jc2Syw2AIBBEpyRLoARLsAQvwh7phBIsgR5gqcMS9IAaMYJwY5I5AHmPTwD6CXkNxRuI96QAQGw+55NE2IDclDTKRRyzzQuI9xv4iuT5hG274Ia9hnRjm+AJA8ASBqiw1gnecDFvQQ6uukJp5yoBeZE9dvMjtgnYQLqxWPI6IzgX/nr92G5yAGUcu9jyutmAAAAAAElFTkSuQmCC);
+        --icon-remark                   : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA20lEQVQ4jc2RwW2EMBBFXwmU4BK2hC2BEijBl2XmSAdbgkugBEoYyYzPlEAJycEskSICUSJFmaOl/8bzPvy/idag84D6hLihviBlRPx5HX6UG+oL6hM631ELqAX63KKeEF/R+X4cVguoL/S5PV0gvvIotwOAJ3QeLn+puUPKeARYUAsA9B7rCblDc7dtrg6iNYiv54DqYNhkJvrc7lvVwleAhObuFyds5DPIq6VDiUC9299QT/tbtGZ3cNXSB8inKvDV/eYkWnMdBhB/Ir4iZfx+6DNAPf0s/NfzDiRljNr0+6LkAAAAAElFTkSuQmCC);
+        --icon-archive                  : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAnUlEQVQ4jWNgoBooOC/AUHG5gaHiynyCuOC8AKYBEM33GcqvrsePr7xnKL/Sj2lA+ZXz2CUw1PUzlF95jypYetWAoeLKf4aKyw7EefXKf4aK8wrozv9PlP8h+D+qayGCRPgfORyurkc1AEWAAMBQjywA8QpuTNiASwl4MUEDKPYCWQaUX+kn6HdMPB9hQOlVA4J+R8elVw2IdjFNAQA/HvRDaCX5CQAAAABJRU5ErkJggg==);
+        --icon-print                    : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAqklEQVQ4ja2Syw2EMAxEpwRKoARK2BIohUtid0EJlJASKCFS1j5TAiVkL/shLCRBwtI7+mWiMXD7DL7549IyyQqWeMBUFrBvwRLfkgUsy044VwrUwWgHox1s6NMkvq1LQOITPgKjXY3Ag5+PBFJXL8iRFQAAyQhSd8pprTb02cUtNvRHL69gmcEyFb/BEtMkg2++PZOMmWM6qfMnuMD+HrZdlyB1mRoruHNe5u4hWjZlUXgAAAAASUVORK5CYII=);
+        --icon-more                     : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAR0lEQVQ4jWNgGAWDEZRfOc9QcdkBQ7zisgND+ZXzDAXnBQgZ0M9QceU/iiEQze8Zyq/0E+sKhCEka0Y3hCzNyIaQrXkUEA0ARk4rJRXvtL4AAAAASUVORK5CYII=);
+        --icon-less                     : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAS0lEQVQ4jWNgGAU0BqVXDRhKrxqQr7n8ynuG8ivvSTcEprniyn6Giiv7STMEWXPBeQEGBgYG0gyB2QrTjC5OEBScF8DQjCw3CqgPABPcMBAhyIGPAAAAAElFTkSuQmCC);
+        --icon-ok                       : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAxklEQVQ4jbWTQQ3DMAxFP4RCKIRCKIRCGARf6uRYBoMwCIVQCJES51wIgbDdtqZxs2jSLPkUvW9/2wH+EuQ6zHEAC8GGBTaMINe1wTaMMOJg5VmkkXsdZiEYSSr8EXEXlV3/Fa52YuXRBL/T9WeBvVIxgf2UFWE/nQWO0A4rWw77W24xLLnA8dFIArkOJq5gIcxxKOfjb+cONnXaKqxZYCF1Zfpsdv2wrg6oyDDWbuFaxEgCC+lwaWfLrJi4lrtvieZP9GO8ALgCKoREiWXrAAAAAElFTkSuQmCC);
+    }
+
+    body {
+        padding: 0;
+    }
+
+    /** Set Font Size */
+    body,
+    td,
+    input,
+    button,
+    select,
+    .f_size {
+        font-size: 14px;
+    }
+
+    /** Remove border radius */
+    * {
+        border-radius: 0 !important;
+    }
+
+    /** Remove horizontal scroll bar */
+    html {
+        overflow-x: hidden;
+    }
+
+    a,
+    a:link {
+        outline        : 0;
+        color          : var(--link-color);
+        text-decoration: none;
+    }
+
+    img[src^="/cgi-bin/readtemplate"] {
+        display: none;
+    }
+
+    /** Error Message */
+    .errmsg {
+        background: var(--panel-background-color);
+        color     : var(--panel-text-color);
+    }
+
+    .btn_gray {
+        /** Reset Gray Button Style */
+        color        : var(--btn-text-color) !important;
+        background   : var(--btn-background);
+        border-color : transparent;
+        border-radius: 2px;
+        transition   : all .156s linear;
+        cursor       : pointer;
+    }
+
+    .btn_gray:hover,
+    .btn_gray:active,
+    .btn_gray:focus {
+        /** Reset Gray Button hover/active/focus Style */
+        background  : var(--btn-hover-background);
+        border-color: var(--btn-border-color);
+        box-shadow  : unset;
+    }
+
+    #composeExitAlert_QMDialog_btn_not_exit:hover {
+        border-color    : red;
+        background-color: red;
+        color           : white !important;
+    }
+
+    #composeExitAlert_QMDialog_btn_exit_save:hover {
+        border-color: var(--btn-primary-background);
+        background  : var(--btn-primary-background);
+        color       : var(--btn-primary-text-color) !important;
+    }
+
+    input.txt,
+    input.txt2,
+    textarea.txt,
+    .txt,
+    .qm_txt {
+        border: 1px solid var(--panel-white-border-color);
+    }
+
+    .dialog_operate {
+        background: var(--panel-white-background-color);
+    }
+
+    @import "_navbar.scss";
+    @import "_sidebar.scss";
+    @import "_main.scss";
+    @import "_readmail.scss";
+    @import "_writemail.scss";
+    @import "_groupmail.scss";
+    @import "_settings.scss";
+}
+
+@-moz-document regexp("https?:\\/\\/mail\\.qq\\.com\\/cgi-bin\\/frame_html\\?t=newwin_frame.*") {
+    #mainFrameContainer {
+        margin: 0;
+        top   : 0;
+        left  : 0;
+    }
+}
+
+@-moz-document regexp("https?:\\/\\/mail\\.qq\\.com\\/") {
+    body {
+        background     : var(--login-background);
+        background-size: cover;
+        margin         : 0;
+        position       : absolute;
+        left           : 0;
+        right          : 0;
+        top            : 0;
+        bottom         : 0;
+        overflow       : hidden;
+    }
+
+    .header,
+    .footer {
+        display: none;
+    }
+
+    .container {
+        position        : absolute;
+        top             : 0;
+        right           : 0;
+        bottom          : 0;
+        left            : 0;
+        display         : flex;
+        justify-content : center;
+        align-items     : center;
+        background-color: rgba(0, 0, 0, .3);
+    }
+
+    .content_wrapper {
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+    }
+
+    .login_pictures {
+        display: none;
+    }
+}
+
+@-moz-document regexp("https?:\\/\\/mail\\.qq\\.com\\/cgi-bin\\/loginpage.*") {
+    body {
+        background     : var(--login-background);
+        background-size: cover;
+        margin         : 0;
+        position       : absolute;
+        left           : 0;
+        right          : 0;
+        top            : 0;
+        bottom         : 0;
+        overflow       : hidden;
+    }
+
+    .header,
+    .footer {
+        display: none;
+    }
+
+    .container {
+        height: 100%;
+    }
+
+    .content {
+        height         : 100%;
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+
+        .logout_info {
+            padding      : 20px;
+            background   : rgba(255, 255, 255, .75);
+            border-radius: 5px !important;
+        }
+
+        .logout_ad {
+            display: none !important;
+        }
+    }
+}

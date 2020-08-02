@@ -1,0 +1,204 @@
+body[module="qmReadMail"] {
+    margin : 0 !important;
+    padding: 0 !important;
+
+    #qqmail_mailcontainer {
+        margin-top: 0;
+        background: var(--panel-gray-background-color);
+
+        >div {
+            /* Clear z-index */
+            z-index: unset !important;
+        }
+
+        #mainmail {
+            margin-bottom : 0 !important;
+            padding-bottom: 10px;
+
+            #nextmail_top {
+                margin: 15px;
+            }
+        }
+
+        .toolbgline {
+            .left {
+                margin : 10px 5px;
+                padding: 0 12px;
+            }
+        }
+
+        .settingtable {
+            background  : var(--panel-white-background-color);
+            border      : 0px;
+            padding-left: 4px !important;
+            padding     : 4px !important;
+        }
+
+        .readmailinfo {
+            background   : var(--panel-white-background-color);
+            border       : 1px solid var(--panel-white-border-color);
+            border-bottom: 0;
+            margin       : 104px 10px 0;
+            padding      : 10px;
+
+
+
+            >table {
+                margin-left: 50px;
+            }
+
+            .readmail_subject {
+                /** Mail Subject */
+                position   : absolute;
+                top        : -59px;
+                left       : 0px;
+                width      : 100%;
+                height     : 24px;
+                line-height: 24px;
+                background : var(--panel-gray-background-color);
+                padding    : 17px 12px !important;
+                margin-left: -11px;
+
+                #subject {
+                    font-size: 17px;
+                }
+            }
+
+            >#subjectTip~table {
+                height: auto !important;
+            }
+
+
+            #senderInfo2 {
+                /** User Avatar */
+                position: absolute;
+                left    : 11px;
+                top     : 13px;
+                padding : 0 !important;
+                width   : 45px;
+                height  : 45px;
+                overflow: hidden;
+
+                >div {
+                    width : 42px !important;
+                    height: 42px !important;
+
+                    #qqiconimg {
+                        margin: 0 !important;
+                    }
+                }
+
+            }
+        }
+
+
+        #contentDiv {
+            /** Mail Content */
+            background: var(--panel-white-background-color);
+            border    : 1px solid var(--panel-white-border-color);
+            border-top: 0;
+            padding   : 10px !important;
+            margin    : 0 10px;
+            overflow  : hidden;
+            /** Fix attachmet style */
+        }
+
+
+        #attachment {
+            /** Mail Attachment */
+            margin: 10px 10px 0;
+        }
+
+        #pageEnd {
+            margin    : 10px;
+            background: var(--panel-white-background-color);
+            border    : 1px solid var(--panel-white-border-color);
+        }
+    }
+}
+
+body.netdisk_multi {
+    padding: 0 !important;
+
+    .readmailinfo {
+        background   : var(--panel-gray-background-color);
+        width        : 100%;
+        overflow     : hidden;
+        padding-right: 10px;
+
+        .rmg_mailinfo {
+            >tbody {
+                >tr:first-child {
+                    margin             : 0 10px;
+                    display            : block;
+                    border             : 1px solid transparent;
+                    box-sizing         : border-box;
+                    border-bottom-color: var(--panel-white-border-color);
+
+                    >td.settingtable {
+                        width      : 100%;
+                        height     : 24px;
+                        line-height: 24px;
+                        background : var(--panel-gray-background-color) !important;
+                        padding    : 17px 0px !important;
+
+                        >.qm_left {
+                            padding-bottom: 0 !important;
+                            line-height   : 17px;
+
+                            .sub_title {
+                                font-size: 17px !important;
+                            }
+                        }
+                    }
+                }
+
+                >tr:not(:first-child) {
+                    display     : block;
+                    background  : var(--panel-white-background-color);
+                    margin      : 0 10px;
+                    padding     : 10px 0 0 10px;
+                    border      : 1px solid var(--panel-white-border-color) !important;
+                    width       : calc(100% - 20px);
+                    border-width: 0 1px !important;
+                    box-sizing  : border-box;
+
+                    td {
+                        margin : 0 !important;
+                        padding: 0px !important;
+                    }
+
+                    #attchshow {
+                        margin        : 0px;
+                        padding-left  : 0;
+                        padding-bottom: 0;
+                    }
+
+                    #attchshow~tr {
+                        padding: 0;
+                        margin : 0;
+
+                        >td {
+                            padding-top: 10px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .readmailinfo:not(:first-child) {
+        border : 0px;
+        padding: 0 !important;
+
+        #quickreply {
+            margin      : 0 10px;
+            background  : var(--panel-white-background-color);
+            border      : 1px solid var(--panel-white-border-color);
+            border-width: 0 1px;
+            padding     : 0 10px;
+
+
+        }
+    }
+}

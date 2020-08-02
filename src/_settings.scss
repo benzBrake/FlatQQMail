@@ -1,0 +1,27 @@
+#postop0,
+.toolbgline.barspace4 {
+    display: none;
+}
+
+
+.settingtable,
+.settingTitle .selected {
+    background: var(--panel-white-background-color);
+}
+
+.toolbgline.h22 {
+    /* Save Toolbar */
+    bottom      : 0;
+    top         : unset;
+    display     : flex;
+    align-items : center;
+    padding-left: 10px;
+    border-top  : 2px solid var(--toolbar-border-color);
+}
+
+body[onunload="changeStyle();"],
+body.tbody {
+    .txt_title {
+        display: none;
+    }
+}

@@ -1,0 +1,1141 @@
+@charset "UTF-8";
+/* ==UserStyle==
+@name           FlatQQMail
+@name:zh        QQ 邮箱个性化样式
+@namespace      github.com/benzbrake/FlatQQMail
+@version        2.0.1
+@description    Flat Style For QQMail
+@author         Ryan
+@var text login-background "Login Page Background" url(https://area.sinaapp.com/bingImg?daysAgo=2)
+@var text left-panel-width "Left Sidebar Width" 190px
+==/UserStyle== */
+@namespace url(http://www.w3.org/1999/xhtml);
+@-moz-document domain("mail.qq.com") {
+  html {
+    --main-color: #0078d4;
+    --main-text-color: #fff;
+    --navbar-height: 60px;
+    --search-background: rgba(255, 255, 255, .7);
+    --search-hover-background: #fff;
+    --search-border-color: #c7e0f4;
+    --left-panel-background: #f3f2f1;
+    --left-panel-hover: #edebe9;
+    --left-panel-active: #c7e0f4;
+    --left-panel-active-text-color: #005a9e;
+    --left-panel-text-color: #323130;
+    --left-panel-border-color: #edebe9;
+    --toolbar-background: #f3f2f1;
+    --toolbar-height: 44px;
+    --toolbar-border-color: #edebe9;
+    --panel-background-color: #C7E0F4;
+    --panel-border-color: #edebe9;
+    --panel-text-color: #323130;
+    --panel-white-background-color: #fff;
+    --panel-white-border-color: #d0d0d0;
+    --panel-gray-background-color: #faf9f8;
+    --btn-background: #f3f2f1;
+    --btn-hover-background: #edebe9;
+    --btn-text-color: #004578;
+    --btn-border-color: #edebe9;
+    --btn-primary-background: #0078d4;
+    --btn-primary-text-color: #fff;
+    --btn-primary-hover-background: #005a9e;
+    --btn-secondary-background: #eff6fc;
+    --btn-secondary-hover-background: #deecf9;
+    --btn-secondary-text-color: #005a9e;
+    --link-color: #2672ec;
+    --icon-search: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAv0lEQVQ4jc2SwQ2DMAxFGYEROEb6z1JG6AgdgREYgQ0YoSMwQkbICIzACPTi9IAIoKqH+hTF/vb3/26av4sYYwuMQAZWYJY03AJL6h2UzWyS1JvZBGxADiF0VXAIoQNWM5tijO0BqwykagOfuOzBuwGbpP6wQaF9seICjNXklVgu6KuWTHcYVGvcurWmtKTB3XicUcxAlhR34I+9ZwyL0qn47u9yUNlduD4qM3v6SjMwFkb+V7fyThStvm7w83gDIMhQYknIEDsAAAAASUVORK5CYII=);
+    --icon-wireless: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAtUlEQVQ4jd2SYQ3FIAyEkYCESZgEJCBhEiYBB0hAwiRMwiRMAhK+/XjH0nRvAt5rQtJej2tzEML/BLC84LOrI5AfJKB7EZGbwxKfmC24A7vyavAGbEasKN+A0wp0IOugKSMfApNqy4tjfUQowKFph/BTmyRt2tQHSF6g6mLSml29rkubE8jBFIs3SOTRG0Znw5u+mViA+GJiNSYe1sTbIPdklec/uI32f2Edk61wcKFNVo//cFxsZm+SzPAjvgAAAABJRU5ErkJggg==);
+    --icon-star: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA80lEQVQ4jbWSwW2FMBBEpwRKoARKSAkpgRJ8wbtHOnAJlEAJlLASHp8pwSWQAyR8fj5OgpS92NJq386MDfxr6dzC090b7lIDYYZyRZeaG9s5QGMPYYCk8Y/DVm/brYazCsoVanVZrqeDMEA5QblAY38AYw9hhqQRGnvo3J6BygXKCcIAT/fSs5/f4el2mEGYj+a2eflVWF1qoFwgDOeGMECYi5DL4cPKAKFdAj5tFjecvD3VTwqhc3tS4Kx6Alj5Z3o6KAc4q76CVa7b3ertfHje7xLTuIeUoZzQpWYPbthBVv6VGt+gHF763PIJ0Lm9BtyoD2Y3oxhUL8HuAAAAAElFTkSuQmCC);
+    --icon-unstar: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAvElEQVQ4jbWSwQ2DMBAEtwRKSAmUkBIoISX4g++edEAJlEAJLsESrN+UQAnJA4JCgsEgZaX92No5++6Av8n4DEoHpYPx2XmA9hWUz9nN+erCcQEIR6i/pYfX1d+Qeu+5dygdhH5VedsDJLSwXfEB4HAQ2vYiCe0FwFdjp5GlhYV+e7QpkGgYAGxXHAIsTXwalub4C30VB6Q0U0K7A6BfbZ+whrD+6UFU2j3mRXIoQ76clyGHspnuukcccEEvoT4gV5LOlygAAAAASUVORK5CYII=);
+    --icon-edit: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAv0lEQVRIie2UYQ3DIBBGK6ESKgEJSJgUJOBgEpAwCZNQCUhAwtsfyAgpHLsmy5LuS/jV63t3XNNl+ecbAQywA14qtIADvHBM9c4GRN7pS5rCXu5N5x4I1fM0EgCEyWupOy+SBNwkQX/EY3iJq69OLQDWvNA6EdikxkTBKbgkmIEDq0qQ4Y8GvjdwJ+7vSDADl6aXBCJcLcjdi/AzAlvBn6MlagUmS8Zfh1bwSX5KEJF/1+0Js4JSqEkCrGb6i+cFOBKaSL4ZmCkAAAAASUVORK5CYII=);
+    --icon-receive: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAi0lEQVRIie3UXQ2AIBSGYSMQgQhGMAJRjGAjIxjBCEYgwuuFsjkm7Bx+7nhvle/Z1DlNI2nATr4TMDWApHIkLCSumXdc2qECShA1IG0AA6gDAKuX5eMzcHUBgAXw2fOlAODCeHMAWL/jcS2ALTWeBCRF51xyNLqx+E/J85LVT0AVz2fquwEvYrsCf92tlzD9U+HLQgAAAABJRU5ErkJggg==);
+    --icon-contacts: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABOElEQVRIid2UsW2GMBCF/xE8AiN4BEZgBIoM4AkiNmAERmAEyr9kgBQoSpGSOtWXIs/KCWyC/9AklpB83Pm9e3dn327/fgEOaICgr7oSvAZW9itcBQ4wA15KamDU//a3BJOydwe+SvYu5ifwSll2GX8jfyM7xP1ZgtoCJPzOJgB0uWRyBP6ozkZhK3ssVRAzHDL+sCnRUjy+wCCQevPfq8GTIZuKwI2KOSoRUCfwVX16Bt4fmaI48wF4MRfsQ4C9/E/AXb7xLLg3maP6LsAb8Kp9XKvpQ69zeTV8zXcsQTgKVmxMpDUkaSWm5kUTwffT4WUvyZFVA3dTc4LASfEgu02qUCZzCbg52wOr9j7ut0ELmYt1gqCV+ioqSgUB9A8SxMfP9sFtgy4jyAX1pQ02Z53Ol93oP7E+AVmOV2PqRK2HAAAAAElFTkSuQmCC);
+    --icon-profile: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA8ElEQVQ4ja1SwQ3DIAy8ETJCR+gIGSEjdAQ+BT+7QUfICBkhIyDB8c4IHYE+aNJQHKmVaskSNvh82Af81YzvILGHDYPqEnsY3+nF13SGcIFwhkuT6sIZwgxL0wIIZ/1CY8kM8ad30vEOYYbj/Q3oT4UNH1UeQGETLp8MalSXJki8QWJfqO8KhKMOUMcLrulczvEG4XgMULpk2DBUjxx9mT6X5u5LgMc2+Z++YMMAR7/tvKw4b3EDsK6m6p6mWkScN4YNgKWp1iixV4V0yKAklzapmPFdmc1eSGtXYX5JdlTdpUkVVmU2DJBwOfRVG/+yJ+El7HPQij/5AAAAAElFTkSuQmCC);
+    --icon-read: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAyElEQVQ4jcWSQbHDMAxEDaEQCiEQCiEQCqEQetPs08EQPoRAKARDKIRAcC/K1PObuL5VMzpJet6VnFIncs6nXr0bwBVYgQpchwfN7AIUYHX3LOkekAJMXbnunuPVR9sMTMACVHfPH9Yauauk2xdbT6BKmtvCH1BGlxYKl/+AZbOxB9pqbf8HwMzOIfG5s4MSNqdDwPZSSKyS5rjKChQzO3cVtJLjIjWGl9bWECCllCTd9nYyDDiKI0CRNI9kfKo3oPE7nNtJfx8v4dADOEfYAroAAAAASUVORK5CYII=);
+    --icon-unread: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAuUlEQVQ4jd2SvRGDMAyFNYJHyAiMwAgp8aPxCGzCCBmBHiJ7BEbwCC4goiRNSCD8hbukybtToyd9eoWI/kPCKITRH6mOcRkDemH4tkS0d6wtEQnDC6OfAG5XfRZGaKok3ltuGWYGICJqqiQeYO/LjwN+8BYB04g6e/k6E4Yfp1sFEBEFZ5RY1MJpLpzmYlF3LjmNZzYBz77VTqx2wRk18z4BbOn7gKWYawrOqCnAanf0E4VRHE39G90BhIreKURRbZ0AAAAASUVORK5CYII=);
+    --icon-open: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAjUlEQVQ4jc2Syw2AIBBEpyRLoARLsAQvwh7phBIsgR5gqcMS9IAaMYJwY5I5AHmPTwD6CXkNxRuI96QAQGw+55NE2IDclDTKRRyzzQuI9xv4iuT5hG274Ia9hnRjm+AJA8ASBqiw1gnecDFvQQ6uukJp5yoBeZE9dvMjtgnYQLqxWPI6IzgX/nr92G5yAGUcu9jyutmAAAAAAElFTkSuQmCC);
+    --icon-remark: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA20lEQVQ4jc2RwW2EMBBFXwmU4BK2hC2BEijBl2XmSAdbgkugBEoYyYzPlEAJycEskSICUSJFmaOl/8bzPvy/idag84D6hLihviBlRPx5HX6UG+oL6hM631ELqAX63KKeEF/R+X4cVguoL/S5PV0gvvIotwOAJ3QeLn+puUPKeARYUAsA9B7rCblDc7dtrg6iNYiv54DqYNhkJvrc7lvVwleAhObuFyds5DPIq6VDiUC9299QT/tbtGZ3cNXSB8inKvDV/eYkWnMdBhB/Ir4iZfx+6DNAPf0s/NfzDiRljNr0+6LkAAAAAElFTkSuQmCC);
+    --icon-archive: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAnUlEQVQ4jWNgoBooOC/AUHG5gaHiynyCuOC8AKYBEM33GcqvrsePr7xnKL/Sj2lA+ZXz2CUw1PUzlF95jypYetWAoeLKf4aKyw7EefXKf4aK8wrozv9PlP8h+D+qayGCRPgfORyurkc1AEWAAMBQjywA8QpuTNiASwl4MUEDKPYCWQaUX+kn6HdMPB9hQOlVA4J+R8elVw2IdjFNAQA/HvRDaCX5CQAAAABJRU5ErkJggg==);
+    --icon-print: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAqklEQVQ4ja2Syw2EMAxEpwRKoARK2BIohUtid0EJlJASKCFS1j5TAiVkL/shLCRBwtI7+mWiMXD7DL7549IyyQqWeMBUFrBvwRLfkgUsy044VwrUwWgHox1s6NMkvq1LQOITPgKjXY3Ag5+PBFJXL8iRFQAAyQhSd8pprTb02cUtNvRHL69gmcEyFb/BEtMkg2++PZOMmWM6qfMnuMD+HrZdlyB1mRoruHNe5u4hWjZlUXgAAAAASUVORK5CYII=);
+    --icon-more: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAR0lEQVQ4jWNgGAWDEZRfOc9QcdkBQ7zisgND+ZXzDAXnBQgZ0M9QceU/iiEQze8Zyq/0E+sKhCEka0Y3hCzNyIaQrXkUEA0ARk4rJRXvtL4AAAAASUVORK5CYII=);
+    --icon-less: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAS0lEQVQ4jWNgGAU0BqVXDRhKrxqQr7n8ynuG8ivvSTcEprniyn6Giiv7STMEWXPBeQEGBgYG0gyB2QrTjC5OEBScF8DQjCw3CqgPABPcMBAhyIGPAAAAAElFTkSuQmCC);
+    --icon-ok: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAxklEQVQ4jbWTQQ3DMAxFP4RCKIRCKIRCGARf6uRYBoMwCIVQCJES51wIgbDdtqZxs2jSLPkUvW9/2wH+EuQ6zHEAC8GGBTaMINe1wTaMMOJg5VmkkXsdZiEYSSr8EXEXlV3/Fa52YuXRBL/T9WeBvVIxgf2UFWE/nQWO0A4rWw77W24xLLnA8dFIArkOJq5gIcxxKOfjb+cONnXaKqxZYCF1Zfpsdv2wrg6oyDDWbuFaxEgCC+lwaWfLrJi4lrtvieZP9GO8ALgCKoREiWXrAAAAAElFTkSuQmCC);
+  }
+
+  body {
+    padding: 0;
+  }
+
+  /** Set Font Size */
+  body,
+td,
+input,
+button,
+select,
+.f_size {
+    font-size: 14px;
+  }
+
+  /** Remove border radius */
+  * {
+    border-radius: 0 !important;
+  }
+
+  /** Remove horizontal scroll bar */
+  html {
+    overflow-x: hidden;
+  }
+
+  a,
+a:link {
+    outline: 0;
+    color: var(--link-color);
+    text-decoration: none;
+  }
+
+  img[src^="/cgi-bin/readtemplate"] {
+    display: none;
+  }
+
+  /** Error Message */
+  .errmsg {
+    background: var(--panel-background-color);
+    color: var(--panel-text-color);
+  }
+
+  .btn_gray {
+    /** Reset Gray Button Style */
+    color: var(--btn-text-color) !important;
+    background: var(--btn-background);
+    border-color: transparent;
+    border-radius: 2px;
+    transition: all 0.156s linear;
+    cursor: pointer;
+  }
+
+  .btn_gray:hover,
+.btn_gray:active,
+.btn_gray:focus {
+    /** Reset Gray Button hover/active/focus Style */
+    background: var(--btn-hover-background);
+    border-color: var(--btn-border-color);
+    box-shadow: unset;
+  }
+
+  #composeExitAlert_QMDialog_btn_not_exit:hover {
+    border-color: red;
+    background-color: red;
+    color: white !important;
+  }
+
+  #composeExitAlert_QMDialog_btn_exit_save:hover {
+    border-color: var(--btn-primary-background);
+    background: var(--btn-primary-background);
+    color: var(--btn-primary-text-color) !important;
+  }
+
+  input.txt,
+input.txt2,
+textarea.txt,
+.txt,
+.qm_txt {
+    border: 1px solid var(--panel-white-border-color);
+  }
+
+  .dialog_operate {
+    background: var(--panel-white-background-color);
+  }
+
+  /** Navbar */
+  #topDataTd {
+    background-color: var(--main-color);
+    color: var(--main-text-color);
+    height: var(--navbar-height);
+  }
+  #topDataTd a,
+#topDataTd a:link,
+#topDataTd .addrtitle {
+    color: var(--main-text-color);
+  }
+  #topDataTd a.imglogo {
+    /** Mail Logo */
+    display: flex;
+    align-items: center;
+    width: 135px !important;
+  }
+  #topDataTd a.imglogo img {
+    /** Mail Logo Image */
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MEJFODBCNEZDQkQ0MTFFNEE1RTZCQ0U1NDAxRUI5RUIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MEJFODBCNTBDQkQ0MTFFNEE1RTZCQ0U1NDAxRUI5RUIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowQkU4MEI0RENCRDQxMUU0QTVFNkJDRTU0MDFFQjlFQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowQkU4MEI0RUNCRDQxMUU0QTVFNkJDRTU0MDFFQjlFQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgR8ts0AAACOSURBVHja7NjBCQIxEAXQjHiNdmIDNmUDnmxgm9oGtpPdFDDi0ZtgDm58cwkEEngMfyCJzCwj1KEMUiAgICAgICAgICAgu6tjj0u21t5eZ+f7Eq91fVw+2j/VGjoC8qMVPT4f4jZ/dT6nq4507YipJewyYmqZWsIOMlJGdAQEBAQEBAQEBAQE5J8hTwEGAJxNPE8HR8BNAAAAAElFTkSuQmCC);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+  }
+  #topDataTd a.imglogo:after {
+    /** Mail Logo Text */
+    content: "QQMail";
+    color: var(--main-text-color);
+    font-size: 20px;
+    margin-left: 10px;
+  }
+  #topDataTd #logotips {
+    /** Logo Wrapper */
+    flex: 1;
+    display: flex;
+    width: calc(100% - 380px);
+    /** Clear Z-index */
+    z-index: unset;
+  }
+  #topDataTd #logotips .switch {
+    margin: 5px 0 5px auto;
+    /** Tips Icon */
+  }
+  #topDataTd #logotips .switch .left {
+    margin-top: 5px !important;
+  }
+  #topDataTd #logotips .switch span.addrtitle {
+    color: var(--main-text-color);
+    margin-top: 4px;
+    display: block;
+  }
+  #topDataTd #logotips .switch .icon_securityCenterTip {
+    position: relative;
+    background: orange;
+    border-radius: 50% !important;
+  }
+  #topDataTd #logotips .switch .icon_securityCenterTip::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    display: block;
+    border-radius: 50%;
+    left: 4px;
+    position: absolute;
+    top: 2px;
+  }
+  #topDataTd #logotips .switch .icon_securityCenterTip::after {
+    content: "";
+    display: block;
+    height: 5px;
+    background: #fff;
+    width: 2px;
+    position: absolute;
+    left: 5px;
+    bottom: 2px;
+  }
+  #topDataTd .topdata {
+    /** Navbar Wrapper */
+    width: 100%;
+    height: var(--navbar-height);
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  #topDataTd .topdata .topbg {
+    /** Search Wrapper */
+    background: transparent;
+    width: 425px;
+    height: var(--navbar-height) !important;
+    float: none;
+    position: relative;
+  }
+  #topDataTd .topdata .topbg .search_subject {
+    position: absolute;
+    margin: 10px;
+    height: 40px;
+    right: 0;
+    top: 0;
+    width: 170px;
+    display: flex;
+    align-items: center;
+  }
+  #topDataTd .topdata .topbg .search_subject .smartsearch {
+    margin: 0;
+    height: 30px;
+    line-height: 30px;
+    background: var(--search-background);
+    border-color: var(--search-border-color);
+    border-radius: 3px !important;
+    box-shadow: unset;
+    padding: 0;
+    /** Search Icon */
+  }
+  #topDataTd .topdata .topbg .search_subject .smartsearch #subject {
+    background: transparent;
+    padding: 0 21px;
+    height: 30px;
+    width: 120px !important;
+    transition: background 0.156s;
+    line-height: 30px;
+    border: 0;
+  }
+  #topDataTd .topdata .topbg .search_subject .smartsearch #subject:focus {
+    background: var(--search-hover-background);
+  }
+  #topDataTd .topdata .topbg .search_subject .smartsearch #searchIcon,
+#topDataTd .topdata .topbg .search_subject .smartsearch #subjectsearchLogo {
+    top: 8px;
+  }
+  #topDataTd .topdata .topbg .search_subject .smartsearch #searchIcon {
+    background: var(--icon-search);
+  }
+  #topDataTd .topdata .topbg .setinfo {
+    position: absolute;
+    bottom: 10px;
+    margin: unset;
+    left: 0;
+    z-index: 9;
+  }
+  #topDataTd .topdata .topbg .setinfo #sendToMobileIcon {
+    width: 16px;
+    height: 16px;
+    background-position: unset;
+    background: var(--icon-wireless) !important;
+  }
+  #topDataTd #setAliasTiprlt .newtips .arrowup {
+    background: transparent;
+    width: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 9px solid var(--panel-border-color);
+    height: 0;
+    margin-bottom: 0;
+    top: -2px;
+  }
+  #topDataTd #setAliasTiprlt .newtips .contentcontainer,
+#topDataTd #setAliasTiprlt .newtips .content {
+    background: var(--panel-background-color);
+  }
+
+  .bodybgbt {
+    position: static;
+    left: 0;
+    top: 0;
+    width: var(--left-panel-width);
+  }
+
+  #leftPanel {
+    position: static;
+    left: 0;
+    top: 0;
+    width: var(--left-panel-width);
+    /** Move Leftpanel Compose Div to Navbar and Compact */
+    /** Compact #navMidBar */
+  }
+  #leftPanel #navBarDiv {
+    max-width: 500px;
+    position: absolute;
+    top: 0;
+    left: 150px;
+    height: 60px;
+  }
+  #leftPanel #navBarDiv .navbar {
+    display: flex;
+    background: transparent;
+    height: 60px;
+    width: auto;
+  }
+  #leftPanel #navBarDiv .navbar li {
+    color: var(--main-text-color);
+    height: 100% !important;
+    margin: 0;
+    padding: 0;
+    display: block;
+    position: relative;
+  }
+  #leftPanel #navBarDiv .navbar li input {
+    margin: 0;
+    padding: 0;
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    float: none;
+    left: 15px;
+    top: 17px;
+    z-index: -1;
+  }
+  #leftPanel #navBarDiv .navbar li input.composebtn {
+    background: var(--icon-edit);
+  }
+  #leftPanel #navBarDiv .navbar li input.checkbtn {
+    background: var(--icon-receive);
+  }
+  #leftPanel #navBarDiv .navbar li input.addrbtn {
+    background: var(--icon-contacts);
+  }
+  #leftPanel #navBarDiv .navbar li a {
+    margin: 0;
+    padding: 0 10px 0 40px;
+    color: var(--header-text-color);
+    height: 60px !important;
+    line-height: 60px;
+    transition: background 0.156s;
+  }
+  #leftPanel #navBarDiv .navbar li a:hover,
+#leftPanel #navBarDiv .navbar li a:focus {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  #leftPanel #navMidBar {
+    width: var(--left-panel-width);
+    top: 60px;
+    bottom: 0;
+    background: var(--left-panel-background);
+    box-sizing: border-box;
+    border-right: 2px solid var(--left-panel-border-color);
+  }
+  #leftPanel #navMidBar .folderDiv {
+    margin: 10px 0;
+  }
+  #leftPanel #navMidBar .folderDiv #OutFolder li {
+    padding: 0;
+    margin: 0;
+    height: auto;
+    position: relative;
+    transition: all 0.156s linear;
+  }
+  #leftPanel #navMidBar .folderDiv #OutFolder li a {
+    padding: 5px;
+    padding-left: 28px;
+    line-height: 22px;
+    display: block;
+  }
+  #leftPanel #navMidBar .folderDiv #OutFolder li a:link,
+#leftPanel #navMidBar .folderDiv #OutFolder li a:visited {
+    color: var(--left-panel-text-color);
+  }
+  #leftPanel #navMidBar .folderDiv #OutFolder li a:hover {
+    background-color: transparent;
+  }
+  #leftPanel #navMidBar .folderDiv #OutFolder li .empty_link {
+    color: var(--btn-primary-text-color) !important;
+    background: var(--btn-primary-background);
+    border-radius: 2px;
+    transition: background-color 0.156s ease;
+    margin: 0;
+    padding: 4px 8px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+  }
+  #leftPanel #navMidBar .folderDiv #OutFolder li .empty_link:hover {
+    background: var(--btn-primary-hover-background);
+  }
+  #leftPanel #navMidBar .folderDiv #OutFolder li:hover {
+    background: var(--left-panel-hover);
+  }
+  #leftPanel #navMidBar .folderDiv #OutFolder li.fn,
+#leftPanel #navMidBar .folderDiv #OutFolder .fn_list {
+    background: var(--left-panel-active) !important;
+  }
+  #leftPanel #navMidBar .folderDiv #OutFolder #my_note li.fs_sep {
+    display: flex;
+    flex-direction: column;
+  }
+  #leftPanel #navMidBar .folderDiv #OutFolder #my_note li.fs_sep span {
+    margin: 0;
+    padding: 0;
+  }
+  #leftPanel #navMidBar .folderDiv #OutFolder #my_note li.fs_sep a {
+    transition: all 0.156s linear;
+  }
+  #leftPanel #navMidBar .folderDiv #OutFolder #my_note li.fs_sep a:hover,
+#leftPanel #navMidBar .folderDiv #OutFolder #my_note li.fs_sep a:active,
+#leftPanel #navMidBar .folderDiv #OutFolder #my_note li.fs_sep a:focus {
+    background: var(--left-panel-hover);
+  }
+  #leftPanel #navMidBar .folderDiv #OutFolder #my_note li.fs_sep:hover,
+#leftPanel #navMidBar .folderDiv #OutFolder #my_note li.fs_sep:active,
+#leftPanel #navMidBar .folderDiv #OutFolder #my_note li.fs_sep:focus {
+    background: transparent;
+  }
+  #leftPanel #navMidBar .folderDiv #OutFolder .nolinkbg {
+    /** Hide | */
+    display: none !important;
+  }
+  #leftPanel #navMidBar .folderDiv #OutFolder .icon_folderlist_star {
+    background: var(--icon-unstar);
+    width: 16px;
+    height: 16px;
+    margin: 2px;
+  }
+  #leftPanel #navBottomTd {
+    display: none;
+  }
+
+  #sepLineTd {
+    display: none;
+  }
+
+  .pInfoItem .itemHead {
+    white-space: nowrap;
+  }
+
+  /** Main Frame*/
+  #mainFrameContainer {
+    top: 60px;
+    left: 190px;
+  }
+
+  .tbody {
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Title */
+  .txt_title {
+    margin: 0 !important;
+    padding: 10px;
+  }
+
+  /* Toolbar */
+  .toolbgline {
+    background: var(--toolbar-background);
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--toolbar-height);
+    padding: 0;
+    z-index: 9 !important;
+    border: 2px solid var(--toolbar-border-color);
+    border-width: 0 2px 2px 0;
+  }
+  .toolbgline .btn_sepline {
+    display: none;
+  }
+  .toolbgline .left {
+    /** filter .btn_back */
+    margin: 10px;
+  }
+
+  .toolheight .right,
+.toolheight .qm_right {
+    padding: 13px !important;
+    margin: 0 !important;
+  }
+
+  /* Make Bottom toolbar not fixed */
+  .list_btline ~ .toolbgline {
+    position: static !important;
+    padding: 0;
+  }
+
+  #tips {
+    padding: 10px;
+  }
+
+  /* Mail List */
+  table.O2 {
+    border: 0px;
+    padding: 10px;
+  }
+  table.O2 td {
+    background: transparent;
+    border: 0px;
+    background-color: unset;
+  }
+
+  .talk {
+    margin: 0;
+    padding: 10px;
+  }
+
+  table.M,
+table.F {
+    padding: 10px;
+    border: 0;
+    box-shadow: unset;
+  }
+
+  /** Replace Icons */
+  .Rr {
+    background: var(--icon-read) 0 0 no-repeat;
+  }
+
+  .Ru {
+    background: var(--icon-unread) 0 0 no-repeat;
+  }
+
+  table.i td.fs1 div {
+    width: 16px;
+    height: 16px;
+    background: var(--icon-unstar) 0 0 no-repeat;
+  }
+
+  table.i td.fg div {
+    width: 16px;
+    height: 16px;
+    background: var(--icon-star) 0 0 no-repeat;
+  }
+
+  input.s1bg,
+.ico_profileTips,
+.ico_profile_verified {
+    width: 16px;
+    height: 16px;
+    background: var(--icon-profile) 0 0 no-repeat;
+  }
+
+  .qm_ico_reopen {
+    width: 16px;
+    height: 16px;
+    background: var(--icon-open) 0 0 no-repeat;
+  }
+
+  .qm_ico_remarkoff {
+    width: 16px;
+    height: 16px;
+    background: var(--icon-remark) 0 0 no-repeat;
+  }
+
+  .qm_ico_addFilter {
+    width: 16px;
+    height: 16px;
+    background: var(--icon-archive) 0 0 no-repeat;
+  }
+
+  .qm_ico_print {
+    width: 16px;
+    height: 16px;
+    background: var(--icon-print) 0 0 no-repeat;
+  }
+
+  .qm_ico_quickdown {
+    background: var(--icon-more) 0 0 no-repeat;
+  }
+
+  .qm_ico_quickup {
+    background: var(--icon-less) 0 0 no-repeat;
+  }
+
+  .mailList_sendIcon_Succeed {
+    width: 16px;
+    height: 16px;
+    background: var(--icon-ok) 0 0 no-repeat;
+  }
+
+  .selbar_bt {
+    padding: 10px !important;
+    background: var(--panel-white-background-color);
+  }
+  .selbar_bt a {
+    padding: 5px;
+    transition: all 0.156s linear;
+    color: var(--btn-text-color);
+    background-color: var(--btn-background);
+  }
+  .selbar_bt a:hover,
+.selbar_bt a:focus,
+.selbar_bt a:active {
+    background-color: var(--btn-hover-background);
+  }
+
+  #qqmail_mailcontainer {
+    margin-top: var(--toolbar-height);
+    position: relative;
+  }
+  #qqmail_mailcontainer .txt_title {
+    display: none;
+  }
+  #qqmail_mailcontainer .settingtable {
+    border-color: var(--toolbar-border-color);
+    background: var(--toolbar-background);
+  }
+  #qqmail_mailcontainer .mail_list_thumb_form {
+    background: var(--panel-white-background-color);
+  }
+  #qqmail_mailcontainer .qm_con_fold,
+#qqmail_mailcontainer .qm_con_expand {
+    margin: 0;
+  }
+  #qqmail_mailcontainer .toarea {
+    margin: 0;
+    padding: 0;
+  }
+  #qqmail_mailcontainer #tips_bar ~ div:first-child {
+    display: none;
+  }
+
+  body[module=qmReadMail] {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  body[module=qmReadMail] #qqmail_mailcontainer {
+    margin-top: 0;
+    background: var(--panel-gray-background-color);
+  }
+  body[module=qmReadMail] #qqmail_mailcontainer > div {
+    /* Clear z-index */
+    z-index: unset !important;
+  }
+  body[module=qmReadMail] #qqmail_mailcontainer #mainmail {
+    margin-bottom: 0 !important;
+    padding-bottom: 10px;
+  }
+  body[module=qmReadMail] #qqmail_mailcontainer #mainmail #nextmail_top {
+    margin: 15px;
+  }
+  body[module=qmReadMail] #qqmail_mailcontainer .toolbgline .left {
+    margin: 10px 5px;
+    padding: 0 12px;
+  }
+  body[module=qmReadMail] #qqmail_mailcontainer .settingtable {
+    background: var(--panel-white-background-color);
+    border: 0px;
+    padding-left: 4px !important;
+    padding: 4px !important;
+  }
+  body[module=qmReadMail] #qqmail_mailcontainer .readmailinfo {
+    background: var(--panel-white-background-color);
+    border: 1px solid var(--panel-white-border-color);
+    border-bottom: 0;
+    margin: 104px 10px 0;
+    padding: 10px;
+  }
+  body[module=qmReadMail] #qqmail_mailcontainer .readmailinfo > table {
+    margin-left: 50px;
+  }
+  body[module=qmReadMail] #qqmail_mailcontainer .readmailinfo .readmail_subject {
+    /** Mail Subject */
+    position: absolute;
+    top: -59px;
+    left: 0px;
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    background: var(--panel-gray-background-color);
+    padding: 17px 12px !important;
+    margin-left: -11px;
+  }
+  body[module=qmReadMail] #qqmail_mailcontainer .readmailinfo .readmail_subject #subject {
+    font-size: 17px;
+  }
+  body[module=qmReadMail] #qqmail_mailcontainer .readmailinfo > #subjectTip ~ table {
+    height: auto !important;
+  }
+  body[module=qmReadMail] #qqmail_mailcontainer .readmailinfo #senderInfo2 {
+    /** User Avatar */
+    position: absolute;
+    left: 11px;
+    top: 13px;
+    padding: 0 !important;
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+  }
+  body[module=qmReadMail] #qqmail_mailcontainer .readmailinfo #senderInfo2 > div {
+    width: 42px !important;
+    height: 42px !important;
+  }
+  body[module=qmReadMail] #qqmail_mailcontainer .readmailinfo #senderInfo2 > div #qqiconimg {
+    margin: 0 !important;
+  }
+  body[module=qmReadMail] #qqmail_mailcontainer #contentDiv {
+    /** Mail Content */
+    background: var(--panel-white-background-color);
+    border: 1px solid var(--panel-white-border-color);
+    border-top: 0;
+    padding: 10px !important;
+    margin: 0 10px;
+    overflow: hidden;
+    /** Fix attachmet style */
+  }
+  body[module=qmReadMail] #qqmail_mailcontainer #attachment {
+    /** Mail Attachment */
+    margin: 10px 10px 0;
+  }
+  body[module=qmReadMail] #qqmail_mailcontainer #pageEnd {
+    margin: 10px;
+    background: var(--panel-white-background-color);
+    border: 1px solid var(--panel-white-border-color);
+  }
+
+  body.netdisk_multi {
+    padding: 0 !important;
+  }
+  body.netdisk_multi .readmailinfo {
+    background: var(--panel-gray-background-color);
+    width: 100%;
+    overflow: hidden;
+    padding-right: 10px;
+  }
+  body.netdisk_multi .readmailinfo .rmg_mailinfo > tbody > tr:first-child {
+    margin: 0 10px;
+    display: block;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    border-bottom-color: var(--panel-white-border-color);
+  }
+  body.netdisk_multi .readmailinfo .rmg_mailinfo > tbody > tr:first-child > td.settingtable {
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    background: var(--panel-gray-background-color) !important;
+    padding: 17px 0px !important;
+  }
+  body.netdisk_multi .readmailinfo .rmg_mailinfo > tbody > tr:first-child > td.settingtable > .qm_left {
+    padding-bottom: 0 !important;
+    line-height: 17px;
+  }
+  body.netdisk_multi .readmailinfo .rmg_mailinfo > tbody > tr:first-child > td.settingtable > .qm_left .sub_title {
+    font-size: 17px !important;
+  }
+  body.netdisk_multi .readmailinfo .rmg_mailinfo > tbody > tr:not(:first-child) {
+    display: block;
+    background: var(--panel-white-background-color);
+    margin: 0 10px;
+    padding: 10px 0 0 10px;
+    border: 1px solid var(--panel-white-border-color) !important;
+    width: calc(100% - 20px);
+    border-width: 0 1px !important;
+    box-sizing: border-box;
+  }
+  body.netdisk_multi .readmailinfo .rmg_mailinfo > tbody > tr:not(:first-child) td {
+    margin: 0 !important;
+    padding: 0px !important;
+  }
+  body.netdisk_multi .readmailinfo .rmg_mailinfo > tbody > tr:not(:first-child) #attchshow {
+    margin: 0px;
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+  body.netdisk_multi .readmailinfo .rmg_mailinfo > tbody > tr:not(:first-child) #attchshow ~ tr {
+    padding: 0;
+    margin: 0;
+  }
+  body.netdisk_multi .readmailinfo .rmg_mailinfo > tbody > tr:not(:first-child) #attchshow ~ tr > td {
+    padding-top: 10px !important;
+  }
+  body.netdisk_multi .readmailinfo:not(:first-child) {
+    border: 0px;
+    padding: 0 !important;
+  }
+  body.netdisk_multi .readmailinfo:not(:first-child) #quickreply {
+    margin: 0 10px;
+    background: var(--panel-white-background-color);
+    border: 1px solid var(--panel-white-border-color);
+    border-width: 0 1px;
+    padding: 0 10px;
+  }
+
+  #frm[action="/cgi-bin/compose_send"] {
+    background: var(--panel-gray-background-color);
+  }
+  #frm[action="/cgi-bin/compose_send"] #sendtimepadding {
+    background: var(--panel-white-background-color);
+    border: 2px solid var(--panel-white-border-color) !important;
+    margin: 10px;
+  }
+  #frm[action="/cgi-bin/compose_send"] #sendtimepadding .div_txt {
+    border: 0px;
+    background: transparent;
+    padding: 0;
+    height: 39px;
+    line-height: 39px;
+    margin: -3px 0 0 0;
+  }
+  #frm[action="/cgi-bin/compose_send"] #sendtimepadding .content_title {
+    padding-top: 0px !important;
+  }
+  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #rightArea {
+    margin: 0 !important;
+    border: 1px solid var(--panel-white-border-color);
+    border-bottom: 0;
+  }
+  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #rightAreaBtnWarp {
+    border-left: 1px solid var(--panel-white-border-color);
+    margin-left: -1px !important;
+    width: 15px !important;
+    padding-left: 5px;
+  }
+  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #rightAreaBtnWarp ~ div {
+    margin-top: 0 !important;
+  }
+  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #rightAreaBtnWarp ~ div > div:first-child {
+    display: none !important;
+  }
+  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #rightAreaBtnWarp ~ div #addrsDiv {
+    margin-top: -1px;
+  }
+  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #rightAreaBtnWarp ~ div table.i {
+    border: 1px solid #ccc;
+    margin-top: -1px !important;
+    margin-bottom: -1px !important;
+    margin-left: 0px !important;
+  }
+  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #rightAreaBtnWarp ~ div table.i td:first-child > div {
+    padding: 0 !important;
+    min-width: 62px !important;
+    margin: 5px;
+  }
+  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #rightAreaBtnWarp ~ div table.i td:first-child > div a,
+#frm[action="/cgi-bin/compose_send"] #sendtimepadding #rightAreaBtnWarp ~ div table.i td:first-child > div span {
+    display: inline-block;
+    padding: 5px 10px !important;
+    background: var(--btn-secondary-background);
+    color: var(--btn-secondary-text-color);
+    margin: 0;
+  }
+  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #rightAreaBtnWarp ~ div table.i td [clss=f_family] {
+    display: none !important;
+  }
+  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #addrQzone ~ table.i tr:first-child {
+    display: none;
+  }
+  #frm[action="/cgi-bin/compose_send"] #sendtimepadding .addr_base {
+    height: 17px;
+    margin: 1px;
+    line-height: 16px;
+    padding: 10px;
+  }
+  #frm[action="/cgi-bin/compose_send"] #sendtimepadding .addr_text {
+    float: none !important;
+    height: 40px;
+    margin: 0;
+    line-height: 40px;
+  }
+  #frm[action="/cgi-bin/compose_send"] #sendtimepadding .addr_text input {
+    height: 39px;
+    padding: 0;
+    line-height: 39px;
+  }
+  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #addrOper {
+    padding: 10px;
+    border: 1px solid var(--panel-white-border-color);
+  }
+  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #addrOper .input_title {
+    margin: 0 0 0 65px;
+  }
+  #frm[action="/cgi-bin/compose_send"] #sendtimepadding > .input_title {
+    padding: 10px 10px 10px 75px !important;
+    margin: 0;
+    border-left: 1px solid var(--panel-white-border-color);
+  }
+  #frm[action="/cgi-bin/compose_send"] #QMEditorArea {
+    margin-left: -73px;
+    margin-top: -2px;
+    margin-bottom: -2px;
+    border: 1px solid var(--panel-white-border-color);
+    border-right: 0;
+  }
+
+  .qmEditorBase {
+    border: 0px;
+  }
+
+  .qmEditorIfrmEditArea {
+    border: 0px;
+  }
+
+  .qmEditorContent {
+    height: unset !important;
+  }
+
+  .qmEditorToolBarDiv {
+    border-bottom: 0px;
+  }
+
+  .composetab {
+    background: var(--panel-white-background-color);
+    height: 39px;
+    width: 100%;
+    display: block;
+  }
+  .composetab tr td {
+    padding: 0 !important;
+  }
+  .composetab .composetab_img {
+    display: none;
+  }
+  .composetab .composetab_unsel {
+    background: var(--panel-white-background-color);
+    overflow: hidden;
+    height: 39px;
+  }
+  .composetab .composetab_unsel a {
+    color: var(--panel-text-color);
+    font-weight: 400;
+    display: block;
+    padding: 10px !important;
+    margin: 0px;
+    transition: all 0.2s linear 0s;
+    width: auto;
+  }
+  .composetab .composetab_unsel a:hover {
+    text-decoration: none;
+    background: var(--btn-hover-background);
+  }
+  .composetab .composetab_sel {
+    background: var(--panel-white-background-color);
+    height: 39px;
+    position: relative;
+  }
+  .composetab .composetab_sel div {
+    padding: 10px !important;
+    margin: 0px;
+    cursor: pointer;
+  }
+  .composetab .composetab_sel div:hover {
+    background: var(--btn-hover-background);
+  }
+  .composetab .composetab_sel:after {
+    content: "";
+    display: block;
+    border-bottom: 5px solid var(--main-color);
+    position: absolute;
+    width: 60px;
+    bottom: 2px;
+    left: 25px;
+    transition: all 0.156s linear 0s;
+  }
+  .composetab .composetab_sel:hover:after {
+    width: 70px;
+    left: 20px;
+  }
+
+  #toolbar .toolbg,
+#toolbar .toolbg1 {
+    background-color: var(--panel-background-color);
+    padding: 10px;
+    border: 2px solid var(--panel-border-color);
+    border-width: 2px 0 0 0;
+  }
+  #toolbar .toolbg .right,
+#toolbar .toolbg1 .right {
+    margin: 0 !important;
+  }
+  #toolbar .toolbg .btn_space,
+#toolbar .toolbg1 .btn_space {
+    height: 22px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    display: inline-block;
+    background-color: var(--btn-background);
+  }
+  #toolbar .toolbg .btn_space:hover,
+#toolbar .toolbg1 .btn_space:hover {
+    background-color: var(--btn-hover-background);
+  }
+
+  /* Group Mail */
+  body#list #body_list {
+    margin-top: 50px;
+  }
+  body#list .mysidebar {
+    top: 39px !important;
+  }
+
+  #postop0,
+.toolbgline.barspace4 {
+    display: none;
+  }
+
+  .settingtable,
+.settingTitle .selected {
+    background: var(--panel-white-background-color);
+  }
+
+  .toolbgline.h22 {
+    /* Save Toolbar */
+    bottom: 0;
+    top: unset;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    border-top: 2px solid var(--toolbar-border-color);
+  }
+
+  body[onunload="changeStyle();"] .txt_title,
+body.tbody .txt_title {
+    display: none;
+  }
+}
+@-moz-document regexp("https?:\\/\\/mail\\.qq\\.com\\/cgi-bin\\/frame_html\\?t=newwin_frame.*") {
+  #mainFrameContainer {
+    margin: 0;
+    top: 0;
+    left: 0;
+  }
+}
+@-moz-document regexp("https?:\\/\\/mail\\.qq\\.com\\/") {
+  body {
+    background: var(--login-background);
+    background-size: cover;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+  }
+
+  .header,
+.footer {
+    display: none;
+  }
+
+  .container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .content_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login_pictures {
+    display: none;
+  }
+}
+@-moz-document regexp("https?:\\/\\/mail\\.qq\\.com\\/cgi-bin\\/loginpage.*") {
+  body {
+    background: var(--login-background);
+    background-size: cover;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+  }
+
+  .header,
+.footer {
+    display: none;
+  }
+
+  .container {
+    height: 100%;
+  }
+
+  .content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .content .logout_info {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 5px !important;
+  }
+  .content .logout_ad {
+    display: none !important;
+  }
+}
+
+/*# sourceMappingURL=flatqqmail.css.map */

@@ -1,0 +1,212 @@
+#sepLineTd {
+    display: none;
+}
+
+.pInfoItem .itemHead {
+    white-space: nowrap;
+}
+
+/** Main Frame*/
+#mainFrameContainer {
+    top : 60px;
+    left: 190px;
+}
+
+.tbody {
+    padding: 0;
+    margin : 0;
+}
+
+/* Title */
+.txt_title {
+
+    margin : 0 !important;
+    padding: 10px;
+}
+
+/* Toolbar */
+.toolbgline {
+
+    background  : var(--toolbar-background);
+    position    : fixed !important;
+    top         : 0;
+    left        : 0;
+    right       : 0;
+    height      : var(--toolbar-height);
+    padding     : 0;
+    z-index     : 9 !important;
+    border      : 2px solid var(--toolbar-border-color);
+    border-width: 0 2px 2px 0;
+
+
+    .btn_sepline {
+        display: none;
+    }
+
+    .left {
+        /** filter .btn_back */
+        margin: 10px;
+    }
+}
+
+.toolheight {
+
+    .right,
+    .qm_right {
+        padding: 13px !important;
+        margin : 0 !important;
+    }
+}
+
+/* Make Bottom toolbar not fixed */
+.list_btline~.toolbgline {
+    position: static !important;
+    padding : 0;
+}
+
+#tips {
+    padding: 10px;
+}
+
+/* Mail List */
+
+table.O2 {
+    border : 0px;
+    padding: 10px;
+
+
+    td {
+        background      : transparent;
+        border          : 0px;
+        background-color: unset;
+    }
+}
+
+.talk {
+    margin : 0;
+    padding: 10px;
+}
+
+table.M,
+table.F {
+    padding   : 10px;
+    border    : 0;
+    box-shadow: unset;
+}
+
+/** Replace Icons */
+.Rr {
+    background: var(--icon-read) 0 0 no-repeat;
+}
+
+.Ru {
+    background: var(--icon-unread) 0 0 no-repeat;
+}
+
+table.i td.fs1 div {
+    width     : 16px;
+    height    : 16px;
+    background: var(--icon-unstar) 0 0 no-repeat;
+}
+
+table.i td.fg div {
+    width     : 16px;
+    height    : 16px;
+    background: var(--icon-star) 0 0 no-repeat;
+}
+
+input.s1bg,
+.ico_profileTips,
+.ico_profile_verified {
+    width     : 16px;
+    height    : 16px;
+    background: var(--icon-profile) 0 0 no-repeat;
+}
+
+.qm_ico_reopen {
+    width     : 16px;
+    height    : 16px;
+    background: var(--icon-open) 0 0 no-repeat;
+}
+
+.qm_ico_remarkoff {
+    width     : 16px;
+    height    : 16px;
+    background: var(--icon-remark) 0 0 no-repeat;
+}
+
+.qm_ico_addFilter {
+    width     : 16px;
+    height    : 16px;
+    background: var(--icon-archive) 0 0 no-repeat;
+}
+
+.qm_ico_print {
+    width     : 16px;
+    height    : 16px;
+    background: var(--icon-print) 0 0 no-repeat;
+}
+
+.qm_ico_quickdown {
+    background: var(--icon-more) 0 0 no-repeat;
+}
+
+.qm_ico_quickup {
+    background: var(--icon-less) 0 0 no-repeat;
+}
+
+.mailList_sendIcon_Succeed {
+    width     : 16px;
+    height    : 16px;
+    background: var(--icon-ok) 0 0 no-repeat;
+}
+
+.selbar_bt {
+    padding   : 10px !important;
+    background: var(--panel-white-background-color);
+
+    a {
+        padding         : 5px;
+        transition      : all .156s linear;
+        color           : var(--btn-text-color);
+        background-color: var(--btn-background);
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+        background-color: var(--btn-hover-background);
+    }
+}
+
+#qqmail_mailcontainer {
+    margin-top: var(--toolbar-height);
+    position  : relative;
+
+    .txt_title {
+        display: none;
+    }
+
+    .settingtable {
+        border-color: var(--toolbar-border-color);
+        background  : var(--toolbar-background);
+    }
+
+    .mail_list_thumb_form {
+        background: var(--panel-white-background-color);
+    }
+
+    .qm_con_fold,
+    .qm_con_expand {
+        margin: 0;
+    }
+
+    .toarea {
+        margin : 0;
+        padding: 0;
+    }
+
+    #tips_bar~div:first-child {
+        display: none;
+    }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "flatqqmail",
+  "version": "1.0.0",
+  "description": "Flat Style For QQMail",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass src/flatqqmail.scss dist/flatqqmail.css",
+    "watch": "sass --watch src/flatqqmail.scss dist/flatqqmail.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/benzBrake/FlatQQMail.git"
+  },
+  "keywords": [
+    "css",
+    "qqmail"
+  ],
+  "author": "Ryan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benzBrake/FlatQQMail/issues"
+  },
+  "homepage": "https://github.com/benzBrake/FlatQQMail#readme",
+  "devDependencies": {
+    "sass": "^1.26.10"
+  },
+  "dependencies": {}
+}

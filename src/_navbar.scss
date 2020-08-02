@@ -1,0 +1,197 @@
+/** Navbar */
+#topDataTd {
+    background-color: var(--main-color);
+    color           : var(--main-text-color);
+    height          : var(--navbar-height);
+
+    a,
+    a:link,
+    .addrtitle {
+        color: var(--main-text-color);
+    }
+
+    a.imglogo {
+        /** Mail Logo */
+        display    : flex;
+        align-items: center;
+        width      : 135px !important;
+
+        img {
+            /** Mail Logo Image */
+            background-image   : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MEJFODBCNEZDQkQ0MTFFNEE1RTZCQ0U1NDAxRUI5RUIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MEJFODBCNTBDQkQ0MTFFNEE1RTZCQ0U1NDAxRUI5RUIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowQkU4MEI0RENCRDQxMUU0QTVFNkJDRTU0MDFFQjlFQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowQkU4MEI0RUNCRDQxMUU0QTVFNkJDRTU0MDFFQjlFQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgR8ts0AAACOSURBVHja7NjBCQIxEAXQjHiNdmIDNmUDnmxgm9oGtpPdFDDi0ZtgDm58cwkEEngMfyCJzCwj1KEMUiAgICAgICAgICAgu6tjj0u21t5eZ+f7Eq91fVw+2j/VGjoC8qMVPT4f4jZ/dT6nq4507YipJewyYmqZWsIOMlJGdAQEBAQEBAQEBAQE5J8hTwEGAJxNPE8HR8BNAAAAAElFTkSuQmCC);
+            background-repeat  : no-repeat;
+            background-position: center;
+            width              : 30px;
+            height             : 30px;
+            margin-left        : 10px;
+        }
+    }
+
+    a.imglogo:after {
+        /** Mail Logo Text */
+        content    : "QQMail";
+        color      : var(--main-text-color);
+        font-size  : 20px;
+        margin-left: 10px;
+    }
+
+
+
+    #logotips {
+        /** Logo Wrapper */
+        flex   : 1;
+        display: flex;
+        width  : calc(100% - 380px);
+        /** Clear Z-index */
+        z-index: unset;
+
+        .switch {
+            margin: 5px 0 5px auto;
+
+            .left {
+                margin-top: 5px !important;
+            }
+
+            span.addrtitle {
+                color     : var(--main-text-color);
+                margin-top: 4px;
+                display   : block;
+            }
+
+            /** Tips Icon */
+            .icon_securityCenterTip {
+                position     : relative;
+                background   : orange;
+                border-radius: 50% !important;
+            }
+
+            .icon_securityCenterTip::before {
+                content      : "";
+                width        : 4px;
+                height       : 4px;
+                background   : #fff;
+                display      : block;
+                border-radius: 50%;
+                left         : 4px;
+                position     : absolute;
+                top          : 2px;
+            }
+
+            .icon_securityCenterTip::after {
+                content   : "";
+                display   : block;
+                height    : 5px;
+                background: #fff;
+                width     : 2px;
+                position  : absolute;
+                left      : 5px;
+                bottom    : 2px;
+            }
+        }
+    }
+
+    .topdata {
+        /** Navbar Wrapper */
+        width         : 100%;
+        height        : var(--navbar-height);
+        display       : flex;
+        flex-direction: row-reverse;
+
+        .topbg {
+            /** Search Wrapper */
+            background: transparent;
+            width     : 425px;
+            height    : var(--navbar-height) !important;
+            float     : none;
+            position  : relative;
+
+
+            .search_subject {
+                position   : absolute;
+                margin     : 10px;
+                height     : 40px;
+                right      : 0;
+                top        : 0;
+                width      : 170px;
+                display    : flex;
+                align-items: center;
+
+                .smartsearch {
+                    margin       : 0;
+                    height       : 30px;
+                    line-height  : 30px;
+                    background   : var(--search-background);
+                    border-color : var(--search-border-color);
+                    border-radius: 3px !important;
+                    box-shadow   : unset;
+                    padding      : 0;
+
+                    #subject {
+                        background : transparent;
+                        padding    : 0 21px;
+                        height     : 30px;
+                        width      : 120px !important;
+                        transition : background 0.156s;
+                        line-height: 30px;
+                        border     : 0;
+                    }
+
+                    #subject:focus {
+                        background: var(--search-hover-background);
+                    }
+
+                    #searchIcon,
+                    #subjectsearchLogo {
+                        top: 8px;
+                    }
+
+                    /** Search Icon */
+                    #searchIcon {
+                        background: var(--icon-search);
+                    }
+                }
+
+
+            }
+
+            .setinfo {
+                position: absolute;
+                bottom  : 10px;
+                margin  : unset;
+                left    : 0;
+                z-index : 9;
+
+                #sendToMobileIcon {
+                    width              : 16px;
+                    height             : 16px;
+                    background-position: unset;
+                    background         : var(--icon-wireless) !important;
+                }
+            }
+        }
+
+
+
+
+    }
+
+    #setAliasTiprlt {
+        .newtips {
+            .arrowup {
+                background   : transparent;
+                width        : 0;
+                border-left  : 5px solid transparent;
+                border-right : 5px solid transparent;
+                border-bottom: 9px solid var(--panel-border-color);
+                height       : 0;
+                margin-bottom: 0;
+                top          : -2px;
+            }
+
+            .contentcontainer,
+            .content {
+                background: var(--panel-background-color);
+            }
+        }
+    }
+}

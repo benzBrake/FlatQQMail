@@ -1,0 +1,189 @@
+.bodybgbt {
+    position: static;
+    left    : 0;
+    top     : 0;
+    width   : var(--left-panel-width);
+}
+
+#leftPanel {
+    position: static;
+    left    : 0;
+    top     : 0;
+    width   : var(--left-panel-width);
+
+    /** Move Leftpanel Compose Div to Navbar and Compact */
+    #navBarDiv {
+        max-width: 500px;
+        position : absolute;
+        top      : 0;
+        left     : 150px;
+        height   : 60px;
+
+        .navbar {
+            display   : flex;
+            background: transparent;
+            height    : 60px;
+            width     : auto;
+
+            li {
+                color   : var(--main-text-color);
+                height  : 100% !important;
+                margin  : 0;
+                padding : 0;
+                display : block;
+                position: relative;
+
+                input {
+                    margin  : 0;
+                    padding : 0;
+                    height  : 24px;
+                    width   : 24px;
+                    position: absolute;
+                    float   : none;
+                    left    : 15px;
+                    top     : 17px;
+                    z-index : -1;
+                }
+
+                input.composebtn {
+                    background: var(--icon-edit);
+                }
+
+                input.checkbtn {
+                    background: var(--icon-receive);
+                }
+
+                input.addrbtn {
+                    background: var(--icon-contacts);
+                }
+
+                a {
+                    margin     : 0;
+                    padding    : 0 10px 0 40px;
+                    color      : var(--header-text-color);
+                    height     : 60px !important;
+                    line-height: 60px;
+                    transition : background .156s;
+                }
+
+                a:hover,
+                a:focus {
+                    background: rgba(0, 0, 0, .3);
+                }
+            }
+
+
+        }
+    }
+
+    /** Compact #navMidBar */
+    #navMidBar {
+        width       : var(--left-panel-width);
+        top         : 60px;
+        bottom      : 0;
+        background  : var(--left-panel-background);
+        box-sizing  : border-box;
+        border-right: 2px solid var(--left-panel-border-color);
+
+        .folderDiv {
+            margin: 10px 0;
+
+            #OutFolder {
+                li {
+                    padding   : 0;
+                    margin    : 0;
+                    height    : auto;
+                    position  : relative;
+                    transition: all .156s linear;
+
+                    a {
+                        padding     : 5px;
+                        padding-left: 28px;
+                        line-height : 22px;
+                        display     : block;
+                    }
+
+                    a:link,
+                    a:visited {
+                        color: var(--left-panel-text-color);
+                    }
+
+                    a:hover {
+                        background-color: transparent;
+                    }
+
+                    .empty_link {
+                        color        : var(--btn-primary-text-color) !important;
+                        background   : var(--btn-primary-background);
+                        border-radius: 2px;
+                        transition   : background-color .156s ease;
+                        margin       : 0;
+                        padding      : 4px 8px;
+                        position     : absolute;
+                        right        : 10px;
+                        top          : 0;
+                    }
+
+                    .empty_link:hover {
+                        background: var(--btn-primary-hover-background);
+                    }
+                }
+
+                li:hover {
+                    background: var(--left-panel-hover);
+                }
+
+                li.fn,
+                .fn_list {
+                    background: var(--left-panel-active) !important;
+                }
+
+                #my_note {
+                    li.fs_sep {
+                        display       : flex;
+                        flex-direction: column;
+
+                        span {
+                            margin : 0;
+                            padding: 0;
+                        }
+
+                        a {
+                            transition: all .156s linear;
+                        }
+
+                        a:hover,
+                        a:active,
+                        a:focus {
+                            background: var(--left-panel-hover);
+                        }
+
+                    }
+
+                    li.fs_sep:hover,
+                    li.fs_sep:active,
+                    li.fs_sep:focus {
+                        background: transparent;
+                    }
+                }
+
+
+                .nolinkbg {
+                    /** Hide | */
+                    display: none !important;
+                }
+
+                .icon_folderlist_star {
+                    background: var(--icon-unstar);
+                    width     : 16px;
+                    height    : 16px;
+                    margin    : 2px;
+                }
+            }
+        }
+    }
+
+    #navBottomTd {
+        display: none;
+    }
+}
