@@ -1,8 +1,8 @@
 /** Navbar */
 #topDataTd {
-    background-color: var(--main-color);
-    color           : var(--main-text-color);
-    height          : var(--navbar-height);
+    background: var(--main-color);
+    color     : var(--main-text-color);
+    height    : var(--navbar-height);
 
     a,
     a:link,
@@ -46,9 +46,11 @@
         z-index: unset;
 
         .switch {
+            color : #fff;
             margin: 5px 0 5px auto;
 
             .left {
+                color     : #fff;
                 margin-top: 5px !important;
             }
 
@@ -96,6 +98,7 @@
         height        : var(--navbar-height);
         display       : flex;
         flex-direction: row-reverse;
+        background    : unset !important;
 
         .topbg {
             /** Search Wrapper */

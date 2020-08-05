@@ -7,6 +7,8 @@
 @description:zh-CN QQ 邮箱个性化样式
 @description    Persnal Style For QQMail
 @author         Ryan
+@homepageURL    https://greasyfork.org/scripts/408049
+@supportURL     https://greasyfork.org/zh-CN/scripts/408049-flatqqmail/feedback
 @var text login-background "Login Page Background" url(https://area.sinaapp.com/bingImg?daysAgo=2)
 @var text left-panel-width "Left Sidebar Width" 190px
 ==/UserStyle== */
@@ -150,7 +152,7 @@ textarea.txt,
 
   /** Navbar */
   #topDataTd {
-    background-color: var(--main-color);
+    background: var(--main-color);
     color: var(--main-text-color);
     height: var(--navbar-height);
   }
@@ -190,10 +192,12 @@ textarea.txt,
     z-index: unset;
   }
   #topDataTd #logotips .switch {
+    color: #fff;
     margin: 5px 0 5px auto;
     /** Tips Icon */
   }
   #topDataTd #logotips .switch .left {
+    color: #fff;
     margin-top: 5px !important;
   }
   #topDataTd #logotips .switch span.addrtitle {
@@ -233,6 +237,7 @@ textarea.txt,
     height: var(--navbar-height);
     display: flex;
     flex-direction: row-reverse;
+    background: unset !important;
   }
   #topDataTd .topdata .topbg {
     /** Search Wrapper */
@@ -331,6 +336,7 @@ textarea.txt,
     top: 0;
     left: 150px;
     height: 60px;
+    background: unset;
   }
   #leftPanel #navBarDiv .navbar {
     display: flex;
@@ -382,6 +388,7 @@ textarea.txt,
     width: var(--left-panel-width);
     top: 60px;
     bottom: 0;
+    margin: 0 !important;
     background: var(--left-panel-background);
     box-sizing: border-box;
     border-right: 2px solid var(--left-panel-border-color);
@@ -563,7 +570,7 @@ table.F {
     background: var(--icon-unread) 0 0 no-repeat;
   }
 
-  table.i td.fs1 div {
+  table.i td.fg.fs1 div {
     width: 16px;
     height: 16px;
     background: var(--icon-unstar) 0 0 no-repeat;
@@ -1036,6 +1043,10 @@ table.F {
   #postop0,
 .toolbgline.barspace4 {
     display: none;
+  }
+
+  .settingTitle {
+    padding-top: 0;
   }
 
   .settingtable,

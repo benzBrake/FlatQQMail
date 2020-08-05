@@ -13,11 +13,12 @@
 
     /** Move Leftpanel Compose Div to Navbar and Compact */
     #navBarDiv {
-        max-width: 500px;
-        position : absolute;
-        top      : 0;
-        left     : 150px;
-        height   : 60px;
+        max-width : 500px;
+        position  : absolute;
+        top       : 0;
+        left      : 150px;
+        height    : 60px;
+        background: unset;
 
         .navbar {
             display   : flex;
@@ -81,6 +82,7 @@
         width       : var(--left-panel-width);
         top         : 60px;
         bottom      : 0;
+        margin      : 0 !important;
         background  : var(--left-panel-background);
         box-sizing  : border-box;
         border-right: 2px solid var(--left-panel-border-color);
