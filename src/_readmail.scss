@@ -34,6 +34,19 @@ body[module="qmReadMail"] {
             padding     : 4px !important;
         }
 
+        .settingtable.txt_left {
+            span {
+                height     : 20px !important;
+                line-height: 20px !important;
+            }
+        }
+
+        .settingtable.txt_right {
+            >span {
+                vertical-align: 3px !important;
+            }
+        }
+
         .readmailinfo {
             background   : var(--panel-white-background-color);
             border       : 1px solid var(--panel-white-border-color);

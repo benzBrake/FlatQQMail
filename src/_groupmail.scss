@@ -7,4 +7,25 @@ body#list {
     .mysidebar {
         top: 39px !important;
     }
+
+    li {
+        transition: all .156s linear;
+    }
+
+    li.fn {
+        background: var(--btn-primary-background);
+
+        a {
+            color: var(--btn-primary-text-color);
+        }
+    }
+
+    li.fs:hover {
+        background-color: var(--btn-primary-background);
+
+        a {
+            color          : var(--btn-primary-text-color);
+            text-decoration: none;
+        }
+    }
 }

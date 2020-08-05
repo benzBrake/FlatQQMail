@@ -12,6 +12,22 @@
     background: var(--panel-white-background-color);
 }
 
+.settingSub {
+    padding: 0 !important;
+
+    a {
+        color  : var(--panel-text-color);
+        display: block;
+        padding: 10px;
+    }
+}
+
+.settingSub.selected {
+    padding: 10px !important
+}
+
+
+
 .toolbgline.h22 {
     /* Save Toolbar */
     bottom      : 0;

@@ -85,16 +85,12 @@
         border-radius: 0 !important;
     }
 
-    /** Remove horizontal scroll bar */
-    html {
-        overflow-x: hidden;
-    }
-
     a,
     a:link {
         outline        : 0;
         color          : var(--link-color);
         text-decoration: none;
+        transition     : all .156s linear;
     }
 
     img[src^="/cgi-bin/readtemplate"] {
@@ -107,8 +103,12 @@
         color     : var(--panel-text-color);
     }
 
-    .btn_gray {
-        /** Reset Gray Button Style */
+    /** Button */
+
+    /** Reset Gray Button Style */
+    .btn_gray,
+    .qui_btn {
+
         color        : var(--btn-text-color) !important;
         background   : var(--btn-background);
         border-color : transparent;
@@ -117,13 +117,38 @@
         cursor       : pointer;
     }
 
+    /** Reset Gray Button hover/active/focus Style */
     .btn_gray:hover,
     .btn_gray:active,
-    .btn_gray:focus {
-        /** Reset Gray Button hover/active/focus Style */
+    .btn_gray:focus,
+    .qui_btn:hover,
+    .qui_btn:active,
+    .qui_btn:focus {
+
         background  : var(--btn-hover-background);
         border-color: var(--btn-border-color);
         box-shadow  : unset;
+    }
+
+    /** Reset Primary Button Style */
+    .btn_primary,
+    .qui_btn_Blue {
+        background   : var(--btn-primary-background) !important;
+        color        : var(--btn-primary-text-color) !important;
+        cursor       : pointer;
+        border-color : transparent;
+        border-radius: 2px;
+        transition   : all .156s linear;
+        cursor       : pointer;
+    }
+
+    .btn_primary:hover,
+    .btn_primary:active,
+    .btn_primary:focus,
+    .qui_btn_Blue:hover,
+    .qui_btn_Blue:active,
+    .qui_btn_Blue:focus {
+        background: var(--btn-primary-hover-background) !important;
     }
 
     #composeExitAlert_QMDialog_btn_not_exit:hover {
@@ -150,6 +175,16 @@
         background: var(--panel-white-background-color);
     }
 
+    /* Popup */
+    .qmpanel_shadow {
+        box-shadow: 0 .5rem 4rem rgba(0, 0, 0, .11), 0 10px 20px rgba(0, 0, 0, .05), 0 2px 3px rgba(0, 0, 0, .06);
+    }
+
+    .menu_item_high {
+        background: var(--main-color);
+        color     : var(--main-text-color);
+    }
+
     @import "_navbar.scss";
     @import "_sidebar.scss";
     @import "_main.scss";
@@ -157,6 +192,7 @@
     @import "_writemail.scss";
     @import "_groupmail.scss";
     @import "_settings.scss";
+    @import "_attachment.scss";
 }
 
 @-moz-document regexp("https?:\\/\\/mail\\.qq\\.com\\/cgi-bin\\/frame_html\\?t=newwin_frame.*") {
@@ -245,5 +281,11 @@
         .logout_ad {
             display: none !important;
         }
+    }
+}
+
+@-moz-document domain("aq.qq.com") {
+    #mobile_tips #mobile_tips_link_default {
+        top: 140px !important;
     }
 }
