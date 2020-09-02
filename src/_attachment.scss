@@ -1,0 +1,38 @@
+body.ft_l_body {
+    .ft_l_wrapper {
+        .attach_type {
+            height: 16px;
+        }
+
+        .composetab .innerTxt {
+            cursor : pointer;
+            padding: 10px 0;
+        }
+
+        .ft_l_listTopbar {
+            padding      : 10px;
+            border-bottom: unset;
+        }
+
+        .ft_l_listItem {
+            border-bottom: 0px;
+        }
+
+        .ft_l_listItemContent {
+            padding: 10px;
+        }
+
+        .ft_l_listTitle {
+            border-left-color: transparent;
+        }
+
+        a.button_gray_s,
+        a.button_gray_m,
+        a.button_gray_md,
+        a.button_gray_l,
+        a.button_gray_f {
+            background-color: var(--btn-secondary-background);
+            background-image: unset;
+        }
+    }
+}

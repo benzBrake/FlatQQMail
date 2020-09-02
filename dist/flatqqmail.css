@@ -3,7 +3,7 @@
 @name:zh-CN     QQ 邮箱简洁风
 @name           FlatQQMail   
 @namespace      github.com/benzbrake/FlatQQMail
-@version        2.0.4
+@version        2.0.5
 @description:zh-CN QQ 邮箱个性化样式
 @description    Persnal Style For QQMail
 @author         Ryan
@@ -1173,7 +1173,7 @@ body.ft_l_body .ft_l_wrapper a.button_gray_f {
     left: 0;
   }
 }
-@-moz-document regexp("https?:\\/\\/mail\\.qq\\.com\\/") {
+@-moz-document regexp("https?:\\/\\/mail\\.qq\\.com\\/?$") {
   body {
     background: var(--login-background);
     background-size: cover;
