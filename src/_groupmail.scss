@@ -1,31 +1,165 @@
 /* Group Mail */
 body#list {
     #body_list {
-        margin-top: 50px;
+        margin-top: 46px;
     }
 
     .mysidebar {
-        top: 39px !important;
-    }
+        top       : 0 !important;
+        height    : 100%;
+        background: #fff;
+        padding   : 8px;
+        width     : 172px;
 
-    li {
-        transition: all .156s linear;
-    }
+        .sbar_padd {
+            padding: 0 !important;
+            margin : 0 !important;
 
-    li.fn {
-        background: var(--btn-primary-background);
+            .btn_gray {
+                background    : var(--btn-primary-background) !important;
+                color         : var(--btn-primary-text-color) !important;
+                width         : 140px !important;
+                padding-top   : .5em;
+                padding-bottom: .5em;
+            }
 
-        a {
-            color: var(--btn-primary-text-color);
+            .btn_gray:hover,
+            .btn_gray:active,
+            .btn_gray:focus {
+                background: var(--btn-primary-hover-background) !important;
+            }
+        }
+
+        li {
+            transition: all .156s linear;
+            width     : 154px !important;
+            margin    : 0 0 5px !important;
+            padding   : 2px 2px 2px 10px !important;
+
+            a {
+                display: block;
+                padding: 3px 0;
+                color  : var(--left-panel-text-color) !important;
+            }
+        }
+
+        li.fn {
+            background: var(--left-panel-active) !important;
+            height    : auto;
+            position  : relative;
+        }
+
+        li.fs {
+            height  : auto;
+            position: relative;
+        }
+
+        li.fs:hover {
+            background-color: var(--left-panel-hover);
+
+            a {
+                text-decoration: none;
+                background     : transparent;
+            }
+        }
+
+        .bd {
+            border-width: 0 !important;
+            margin      : 2px !important;
+            background  : #c1d9f3;
+            color       : #000;
+            padding     : 5px !important;
+            text-align  : center;
+        }
+
+        #folder_group {
+            .g_list {
+                display    : flex;
+                align-items: center;
+                margin     : 0 !important;
+                padding    : 0 !important;
+
+                a {
+                    color  : var(--left-panel-text-color) !important;
+                    padding: 8px;
+                }
+
+                a.left {
+                    margin-right: auto;
+                }
+
+                a:hover {
+                    background-color: var(--left-panel-hover);
+                    text-decoration : none;
+                }
+            }
+
+            .g_list.toolbg {
+                a:hover {
+                    background-color: transparent;
+                    text-decoration : none;
+                }
+
+
+            }
+
+            .g_list.toolbg+.toolbg {
+                margin: 0 !important;
+            }
+
+
+        }
+
+        .gray {
+            border-width: 0 !important;
+            margin      : 2px 2px 5px !important;
+            background  : #c1d9f3;
+            color       : #000;
+            padding     : 5px !important;
+            text-align  : center;
+        }
+
+        #folder_group {
+            padding: 2px;
+        }
+
+        div[style="margin:0 8px"] {
+            margin: 0 !important;
+
+            [id^="tab_group_"].sbar_padd {
+                padding      : 0 !important;
+                margin-bottom: 5px !important;
+
+                a {
+                    color  : var(--left-panel-text-color) !important;
+                    padding: 4px 8px !important;
+                    display: block;
+                }
+
+                a:hover {
+                    background-color: var(--left-panel-hover);
+                    text-decoration : none;
+                }
+            }
+
+            [id^="tab_group_"].sbar_padd.toolbg {
+                margin-bottom: 0px !important;
+
+                a:hover {
+                    background: transparent;
+                }
+            }
+
+            [id^="show_group_"].toolbg {
+                margin-bottom: 5px !important;
+            }
+        }
+
+        .toolbg {
+            margin : 0 2px !important;
+            padding: 3px !important;
         }
     }
 
-    li.fs:hover {
-        background-color: var(--btn-primary-background);
 
-        a {
-            color          : var(--btn-primary-text-color);
-            text-decoration: none;
-        }
-    }
 }

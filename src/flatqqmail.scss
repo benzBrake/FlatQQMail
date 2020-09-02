@@ -2,7 +2,7 @@
 @name:zh-CN     QQ 邮箱简洁风
 @name           FlatQQMail   
 @namespace      github.com/benzbrake/FlatQQMail
-@version        2.0.5
+@version        2.0.6
 @description:zh-CN QQ 邮箱个性化样式
 @description    Persnal Style For QQMail
 @author         Ryan
@@ -132,7 +132,8 @@
 
     /** Reset Primary Button Style */
     .btn_primary,
-    .qui_btn_Blue {
+    .qui_btn_Blue,
+    .btn_blue {
         background   : var(--btn-primary-background) !important;
         color        : var(--btn-primary-text-color) !important;
         cursor       : pointer;
@@ -147,7 +148,10 @@
     .btn_primary:focus,
     .qui_btn_Blue:hover,
     .qui_btn_Blue:active,
-    .qui_btn_Blue:focus {
+    .qui_btn_Blue:focus,
+    .btn_blue:hover,
+    .btn_blue:active,
+    .btn_blue:focus {
         background: var(--btn-primary-hover-background) !important;
     }
 
@@ -192,6 +196,7 @@
     @import "_writemail.scss";
     @import "_groupmail.scss";
     @import "_settings.scss";
+    @import "_notebook.scss";
     @import "_attachment.scss";
 }
 

@@ -1,0 +1,39 @@
+.myleftbar {
+    margin-top: 46px;
+
+    .digest_item {
+        border    : 0px;
+        margin    : 0 !important;
+        padding   : 0 !important;
+        background: transparent;
+        transition: background .156s;
+
+        .qqshowbd {
+            border: 0px;
+        }
+
+
+    }
+
+    .digest_item_hover {
+        .digest_item_inner {
+            border-width: 0px !important;
+            background  : #f3f3f3;
+        }
+    }
+
+
+}
+
+.mysidebar {
+    ul.navlist_max {
+        li {
+            .pos_img_top {
+                top     : 11px !important;
+                position: absolute;
+                right   : 10px !important;
+                left    : unset !important;
+            }
+        }
+    }
+}
