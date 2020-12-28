@@ -1,0 +1,31 @@
+.contacts {
+    margin    : 0;
+    padding   : 5px;
+    background: #fff !important;
+
+    .panel_fixed {
+        height    : var(--toolbar-height);
+        overflow  : hidden;
+        background: transparent !important;
+
+        .nav_list {
+            height     : var(--toolbar-height);
+            overflow   : hidden;
+            padding-top: 5px !important;
+            background : transparent !important;
+        }
+
+        .search {
+            padding-top: 5px;
+        }
+
+    }
+
+    .panel_list {
+        padding-top: var(--toolbar-height);
+    }
+
+    .panel_groups {
+        margin-top: calc(var(--toolbar-height) + 5px) !important;
+    }
+}

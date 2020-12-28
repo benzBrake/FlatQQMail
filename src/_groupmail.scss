@@ -1,7 +1,19 @@
 /* Group Mail */
+
 body#list {
     #body_list {
         margin-top: 46px;
+    }
+
+    .myleftbar {
+        .infobar {
+            background         : #ffffe9;
+            border-width       : 0 0 1px;
+            border-bottom-color: #e3e6eb;
+            line-height        : 24px;
+            padding            : 10px !important;
+            text-align         : center;
+        }
     }
 
     .mysidebar {
@@ -99,15 +111,11 @@ body#list {
                     background-color: transparent;
                     text-decoration : none;
                 }
-
-
             }
 
             .g_list.toolbg+.toolbg {
                 margin: 0 !important;
             }
-
-
         }
 
         .gray {
@@ -160,6 +168,4 @@ body#list {
             padding: 3px !important;
         }
     }
-
-
 }

@@ -54,8 +54,6 @@ body[module="qmReadMail"] {
             margin       : 104px 10px 0;
             padding      : 10px;
 
-
-
             >table {
                 margin-left: 50px;
             }
@@ -81,7 +79,6 @@ body[module="qmReadMail"] {
                 height: auto !important;
             }
 
-
             #senderInfo2 {
                 /** User Avatar */
                 position: absolute;
@@ -100,10 +97,8 @@ body[module="qmReadMail"] {
                         margin: 0 !important;
                     }
                 }
-
             }
         }
-
 
         #contentDiv {
             /** Mail Content */
@@ -115,7 +110,6 @@ body[module="qmReadMail"] {
             overflow  : hidden;
             /** Fix attachmet style */
         }
-
 
         #attachment {
             /** Mail Attachment */
@@ -210,8 +204,6 @@ body.netdisk_multi {
             border      : 1px solid var(--panel-white-border-color);
             border-width: 0 1px;
             padding     : 0 10px;
-
-
         }
     }
 }

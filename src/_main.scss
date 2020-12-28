@@ -6,7 +6,9 @@
     white-space: nowrap;
 }
 
+
 /** Main Frame*/
+
 #mainFrameContainer {
     top : 60px;
     left: 190px;
@@ -17,21 +19,23 @@
     margin : 0;
 }
 
-/* Title */
-.txt_title {
 
+/* Title */
+
+.txt_title {
     margin : 0 !important;
     padding: 10px;
 }
 
+
 /* Toolbar */
+
 .toolheight {
     position: fixed !important;
-    height: var(--toolbar-height) !important;
+    height  : var(--toolbar-height) !important;
 }
 
 .toolbgline {
-
     background  : var(--toolbar-background);
     top         : 0;
     left        : 0;
@@ -41,7 +45,6 @@
     z-index     : 9 !important;
     border      : 2px solid var(--toolbar-border-color);
     border-width: 0 2px 2px 0;
-
 
     .btn_sepline {
         display: none;
@@ -62,7 +65,9 @@
     }
 }
 
+
 /* Make Bottom toolbar not fixed */
+
 .list_btline~.toolbgline {
     position: static !important;
     padding : 0;
@@ -72,12 +77,12 @@
     padding: 10px;
 }
 
+
 /* Mail List */
 
 table.O2 {
     border : 0px;
     padding: 10px;
-
 
     td {
         background      : transparent;
@@ -98,13 +103,18 @@ table.F {
     box-shadow: unset;
 }
 
+
 /** Replace Icons */
+
 .Rr {
-    background: var(--icon-read) 0 0 no-repeat;
+    background    : var(--icon-read) 0 0 no-repeat;
+    vertical-align: middle !important;
 }
 
-.Ru {
-    background: var(--icon-unread) 0 0 no-repeat;
+.Ru,
+.ico_unreads {
+    background    : var(--icon-unread) 0 0 no-repeat;
+    vertical-align: middle !important;
 }
 
 table.i td.fg.fs1 div {
@@ -171,7 +181,7 @@ input.s1bg,
 
     a {
         padding         : 5px;
-        transition      : all .156s linear;
+        transition      : all 0.156s linear;
         color           : var(--btn-text-color);
         background-color: var(--btn-background);
     }

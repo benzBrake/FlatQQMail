@@ -11,6 +11,7 @@
 @var text login-background "Login Page Background" url(https://area.sinaapp.com/bingImg?daysAgo=2)
 @var text left-panel-width "Left Sidebar Width" 190px
 ==/UserStyle== */
+
 @namespace url(http://www.w3.org/1999/xhtml);
 
 @-moz-document domain("mail.qq.com") {
@@ -104,17 +105,25 @@
     }
 
     /** Button */
-
     /** Reset Gray Button Style */
     .btn_gray,
     .qui_btn {
-
         color        : var(--btn-text-color) !important;
-        background   : var(--btn-background);
-        border-color : transparent;
-        border-radius: 2px;
-        transition   : all .156s linear;
-        cursor       : pointer;
+        background   : var(--btn-background) !important;
+        border-color : transparent !important;
+        border-radius: 2px !important;
+        transition   : all 0.156s linear !important;
+        padding      : 4px !important;
+        cursor       : pointer !important;
+    }
+
+    .currpage a.btn_gray {
+        color      : var(--btn-text-color) !important;
+        font-weight: bold;
+    }
+
+    .left .btn_gray {
+        padding: 4px 15px 4px 5px !important;
     }
 
     /** Reset Gray Button hover/active/focus Style */
@@ -124,7 +133,6 @@
     .qui_btn:hover,
     .qui_btn:active,
     .qui_btn:focus {
-
         background  : var(--btn-hover-background);
         border-color: var(--btn-border-color);
         box-shadow  : unset;
@@ -138,9 +146,9 @@
         color        : var(--btn-primary-text-color) !important;
         cursor       : pointer;
         border-color : transparent;
+        padding      : 4px !important;
         border-radius: 2px;
         transition   : all .156s linear;
-        cursor       : pointer;
     }
 
     .btn_primary:hover,
@@ -198,6 +206,8 @@
     @import "_settings.scss";
     @import "_notebook.scss";
     @import "_attachment.scss";
+    @import "_calendar.scss";
+    @import "_contacts.scss";
 }
 
 @-moz-document regexp("https?:\\/\\/mail\\.qq\\.com\\/cgi-bin\\/frame_html\\?t=newwin_frame.*") {
@@ -208,7 +218,8 @@
     }
 }
 
-@-moz-document regexp("https?:\\/\\/mail\\.qq\\.com\\/?$") {
+@-moz-document regexp("https?:\\/\\/mail\\.qq\\.com\\/?$"),
+regexp("https?:\\/\\/mail\\.qq\\.com\\/cgi-bin\\/loginpage.*") {
     body {
         background     : var(--login-background);
         background-size: cover;
@@ -227,6 +238,7 @@
     }
 
     .container {
+        height          : 100%;
         position        : absolute;
         top             : 0;
         right           : 0;
@@ -238,44 +250,21 @@
         background-color: rgba(0, 0, 0, .3);
     }
 
-    .content_wrapper {
-        display        : flex;
-        justify-content: center;
-        align-items    : center;
-    }
-
-    .login_pictures {
-        display: none;
-    }
-}
-
-@-moz-document regexp("https?:\\/\\/mail\\.qq\\.com\\/cgi-bin\\/loginpage.*") {
-    body {
-        background     : var(--login-background);
-        background-size: cover;
-        margin         : 0;
-        position       : absolute;
-        left           : 0;
-        right          : 0;
-        top            : 0;
-        bottom         : 0;
-        overflow       : hidden;
-    }
-
-    .header,
-    .footer {
-        display: none;
-    }
-
-    .container {
-        height: 100%;
-    }
-
     .content {
         height         : 100%;
         display        : flex;
         justify-content: center;
         align-items    : center;
+
+        .content_wrapper {
+            display        : flex;
+            justify-content: center;
+            align-items    : center;
+        }
+
+        .login_pictures {
+            display: none;
+        }
 
         .logout_info {
             padding      : 20px;

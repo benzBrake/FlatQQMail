@@ -1,4 +1,5 @@
 /** Navbar */
+
 #topDataTd {
     background: var(--main-color);
     color     : var(--main-text-color);
@@ -34,8 +35,6 @@
         font-size  : 20px;
         margin-left: 10px;
     }
-
-
 
     #logotips {
         /** Logo Wrapper */
@@ -108,7 +107,6 @@
             float     : none;
             position  : relative;
 
-
             .search_subject {
                 position   : absolute;
                 margin     : 10px;
@@ -153,8 +151,6 @@
                         background: var(--icon-search);
                     }
                 }
-
-
             }
 
             .setinfo {
@@ -172,10 +168,6 @@
                 }
             }
         }
-
-
-
-
     }
 
     #setAliasTiprlt {

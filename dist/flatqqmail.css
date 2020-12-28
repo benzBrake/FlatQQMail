@@ -3,7 +3,7 @@
 @name:zh-CN     QQ 邮箱简洁风
 @name           FlatQQMail   
 @namespace      github.com/benzbrake/FlatQQMail
-@version        2.0.5
+@version        2.0.6
 @description:zh-CN QQ 邮箱个性化样式
 @description    Persnal Style For QQMail
 @author         Ryan
@@ -108,11 +108,21 @@ a:link {
   .btn_gray,
 .qui_btn {
     color: var(--btn-text-color) !important;
-    background: var(--btn-background);
-    border-color: transparent;
-    border-radius: 2px;
-    transition: all 0.156s linear;
-    cursor: pointer;
+    background: var(--btn-background) !important;
+    border-color: transparent !important;
+    border-radius: 2px !important;
+    transition: all 0.156s linear !important;
+    padding: 4px !important;
+    cursor: pointer !important;
+  }
+
+  .currpage a.btn_gray {
+    color: var(--btn-text-color) !important;
+    font-weight: bold;
+  }
+
+  .left .btn_gray {
+    padding: 4px 15px 4px 5px !important;
   }
 
   /** Reset Gray Button hover/active/focus Style */
@@ -135,9 +145,9 @@ a:link {
     color: var(--btn-primary-text-color) !important;
     cursor: pointer;
     border-color: transparent;
+    padding: 4px !important;
     border-radius: 2px;
     transition: all 0.156s linear;
-    cursor: pointer;
   }
 
   .btn_primary:hover,
@@ -600,10 +610,13 @@ table.F {
   /** Replace Icons */
   .Rr {
     background: var(--icon-read) 0 0 no-repeat;
+    vertical-align: middle !important;
   }
 
-  .Ru {
+  .Ru,
+.ico_unreads {
     background: var(--icon-unread) 0 0 no-repeat;
+    vertical-align: middle !important;
   }
 
   table.i td.fg.fs1 div {
@@ -894,6 +907,11 @@ table.F {
   #frm[action="/cgi-bin/compose_send"] #sendtimepadding .content_title {
     padding-top: 0px !important;
   }
+  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #composeMoreOpt {
+    padding: 0 !important;
+    border-left: 2px;
+    border-right: 2px;
+  }
   #frm[action="/cgi-bin/compose_send"] #sendtimepadding #rightArea {
     margin: 0 !important;
     border: 1px solid var(--panel-white-border-color);
@@ -908,8 +926,11 @@ table.F {
   #frm[action="/cgi-bin/compose_send"] #sendtimepadding #rightAreaBtnWarp ~ div {
     margin-top: 0 !important;
   }
-  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #rightAreaBtnWarp ~ div > div:first-child {
+  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #rightAreaBtnWarp ~ div > div:first-child:not([style*="68px"]) {
     display: none !important;
+  }
+  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #rightAreaBtnWarp ~ div > div[style*="68px"] {
+    margin: 4px !important;
   }
   #frm[action="/cgi-bin/compose_send"] #sendtimepadding #rightAreaBtnWarp ~ div #addrsDiv {
     margin-top: -1px;
@@ -1078,6 +1099,14 @@ table.F {
   /* Group Mail */
   body#list #body_list {
     margin-top: 46px;
+  }
+  body#list .myleftbar .infobar {
+    background: #ffffe9;
+    border-width: 0 0 1px;
+    border-bottom-color: #e3e6eb;
+    line-height: 24px;
+    padding: 10px !important;
+    text-align: center;
   }
   body#list .mysidebar {
     top: 0 !important;
@@ -1297,6 +1326,43 @@ body.ft_l_body .ft_l_wrapper a.button_gray_f {
     background-color: var(--btn-secondary-background);
     background-image: unset;
   }
+
+  #a_newevent {
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  #a_newevent > .ico_addevent {
+    margin-top: 0;
+  }
+
+  .contacts {
+    margin: 0;
+    padding: 5px;
+    background: #fff !important;
+  }
+  .contacts .panel_fixed {
+    height: var(--toolbar-height);
+    overflow: hidden;
+    background: transparent !important;
+  }
+  .contacts .panel_fixed .nav_list {
+    height: var(--toolbar-height);
+    overflow: hidden;
+    padding-top: 5px !important;
+    background: transparent !important;
+  }
+  .contacts .panel_fixed .search {
+    padding-top: 5px;
+  }
+  .contacts .panel_list {
+    padding-top: var(--toolbar-height);
+  }
+  .contacts .panel_groups {
+    margin-top: calc(var(--toolbar-height) + 5px) !important;
+  }
 }
 @-moz-document regexp("https?:\\/\\/mail\\.qq\\.com\\/cgi-bin\\/frame_html\\?t=newwin_frame.*") {
   #mainFrameContainer {
@@ -1305,7 +1371,8 @@ body.ft_l_body .ft_l_wrapper a.button_gray_f {
     left: 0;
   }
 }
-@-moz-document regexp("https?:\\/\\/mail\\.qq\\.com\\/?$") {
+@-moz-document regexp("https?:\\/\\/mail\\.qq\\.com\\/?$"),
+regexp("https?:\\/\\/mail\\.qq\\.com\\/cgi-bin\\/loginpage.*") {
   body {
     background: var(--login-background);
     background-size: cover;
@@ -1324,6 +1391,7 @@ body.ft_l_body .ft_l_wrapper a.button_gray_f {
   }
 
   .container {
+    height: 100%;
     position: absolute;
     top: 0;
     right: 0;
@@ -1335,43 +1403,19 @@ body.ft_l_body .ft_l_wrapper a.button_gray_f {
     background-color: rgba(0, 0, 0, 0.3);
   }
 
-  .content_wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .login_pictures {
-    display: none;
-  }
-}
-@-moz-document regexp("https?:\\/\\/mail\\.qq\\.com\\/cgi-bin\\/loginpage.*") {
-  body {
-    background: var(--login-background);
-    background-size: cover;
-    margin: 0;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    overflow: hidden;
-  }
-
-  .header,
-.footer {
-    display: none;
-  }
-
-  .container {
-    height: 100%;
-  }
-
   .content {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .content .content_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .content .login_pictures {
+    display: none;
   }
   .content .logout_info {
     padding: 20px;

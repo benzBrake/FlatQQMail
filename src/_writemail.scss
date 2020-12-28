@@ -19,12 +19,17 @@
             padding-top: 0px !important;
         }
 
+        #composeMoreOpt {
+            padding     : 0 !important;
+            border-left : 2px;
+            border-right: 2px;
+        }
+
         #rightArea {
             margin       : 0 !important;
             border       : 1px solid var(--panel-white-border-color);
             border-bottom: 0;
         }
-
 
         #rightAreaBtnWarp {
             border-left : 1px solid var(--panel-white-border-color);
@@ -36,8 +41,12 @@
         #rightAreaBtnWarp~div {
             margin-top: 0 !important;
 
-            >div:first-child {
+            >div:first-child:not([style*="68px"]) {
                 display: none !important;
+            }
+
+            >div[style*="68px"] {
+                margin: 4px !important;
             }
 
             #addrsDiv {
@@ -70,8 +79,6 @@
                         display: none !important;
                     }
                 }
-
-
             }
         }
 
@@ -93,7 +100,6 @@
             height     : 40px;
             margin     : 0;
             line-height: 40px;
-
 
             input {
                 height     : 39px;
@@ -170,12 +176,11 @@
             display    : block;
             padding    : 10px !important;
             margin     : 0px;
-            transition : all .2s linear 0s;
+            transition : all 0.2s linear 0s;
             width      : auto;
         }
 
         a:hover {
-
             text-decoration: none;
             background     : var(--btn-hover-background);
         }
@@ -205,7 +210,7 @@
         width        : 60px;
         bottom       : 2px;
         left         : 25px;
-        transition   : all .156s linear 0s;
+        transition   : all 0.156s linear 0s;
     }
 
     .composetab_sel:hover:after {

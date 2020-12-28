@@ -1,0 +1,11 @@
+#a_newevent {
+    height         : 25px;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    padding        : 0;
+
+    >.ico_addevent {
+        margin-top: 0;
+    }
+}
