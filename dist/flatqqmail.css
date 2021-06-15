@@ -3,7 +3,7 @@
 @name:zh-CN     QQ 邮箱简洁风
 @name           FlatQQMail   
 @namespace      github.com/benzbrake/FlatQQMail
-@version        2.0.6
+@version        2.0.7
 @description:zh-CN QQ 邮箱个性化样式
 @description    Persnal Style For QQMail
 @author         Ryan
@@ -886,6 +886,7 @@ table.F {
     border: 1px solid var(--panel-white-border-color);
     border-width: 0 1px;
     padding: 0 10px;
+    position: relative;
   }
 
   #frm[action="/cgi-bin/compose_send"] {
@@ -900,113 +901,169 @@ table.F {
     border: 0px;
     background: transparent;
     padding: 0;
-    height: 39px;
-    line-height: 39px;
-    margin: -3px 0 0 0;
+    height: 36px;
+    line-height: 36px;
+    margin: 0;
   }
   #frm[action="/cgi-bin/compose_send"] #sendtimepadding .content_title {
-    padding-top: 0px !important;
+    padding: 0 !important;
+    padding-left: 10px !important;
+  }
+  #frm[action="/cgi-bin/compose_send"] #sendtimepadding .content_title #QMEditorArea {
+    border: 1px solid var(--panel-white-border-color);
+    position: absolute !important;
+    right: 2px;
+    left: -1px;
+    top: 0px;
+  }
+  #frm[action="/cgi-bin/compose_send"] #sendtimepadding .content_title #QMEditorArea .qmEditorIfrmEditArea {
+    border: 0px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
   #frm[action="/cgi-bin/compose_send"] #sendtimepadding #composeMoreOpt {
-    padding: 0 !important;
+    padding: 4px 0 !important;
     border-left: 2px;
     border-right: 2px;
+    display: flex;
+    align-items: flex-end;
+    height: 24px !important;
   }
-  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #rightArea {
+  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #composeMoreOpt #otherComposeOptionCntr .qqshowbd {
     margin: 0 !important;
-    border: 1px solid var(--panel-white-border-color);
+    padding: 0 !important;
+    height: 100%;
+    line-height: unset !important;
+    border: 0 !important;
+  }
+  #frm[action="/cgi-bin/compose_send"] #sendtimepadding > .input_title {
+    padding-left: 79px;
+  }
+  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #AttList .attsep {
+    margin: 0;
+  }
+  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #Attlist + div {
+    position: relative;
+  }
+  #frm[action="/cgi-bin/compose_send"] #sendtimepadding .vue-schedule-btn {
+    display: none;
+  }
+  #frm[action="/cgi-bin/compose_send"] #rightArea {
+    margin: 0 !important;
+    border: 0;
     border-bottom: 0;
   }
-  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #rightAreaBtnWarp {
-    border-left: 1px solid var(--panel-white-border-color);
+  #frm[action="/cgi-bin/compose_send"] #rightAreaBtnWarp {
     margin-left: -1px !important;
     width: 15px !important;
     padding-left: 5px;
   }
-  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #rightAreaBtnWarp ~ div {
-    margin-top: 0 !important;
+  #frm[action="/cgi-bin/compose_send"] #rightAreaBtnWarp ~ div {
+    margin: 0 200px 0 0 !important;
   }
-  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #rightAreaBtnWarp ~ div > div:first-child:not([style*="68px"]) {
+  #frm[action="/cgi-bin/compose_send"] #rightAreaBtnWarp ~ div [clss=f_family] {
     display: none !important;
   }
-  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #rightAreaBtnWarp ~ div > div[style*="68px"] {
-    margin: 4px !important;
-  }
-  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #rightAreaBtnWarp ~ div #addrsDiv {
-    margin-top: -1px;
-  }
-  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #rightAreaBtnWarp ~ div table.i {
-    border: 1px solid #ccc;
-    margin-top: -1px !important;
-    margin-bottom: -1px !important;
-    margin-left: 0px !important;
-  }
-  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #rightAreaBtnWarp ~ div table.i td:first-child > div {
-    padding: 0 !important;
-    min-width: 62px !important;
-    margin: 5px;
-  }
-  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #rightAreaBtnWarp ~ div table.i td:first-child > div a,
-#frm[action="/cgi-bin/compose_send"] #sendtimepadding #rightAreaBtnWarp ~ div table.i td:first-child > div span {
+  #frm[action="/cgi-bin/compose_send"] #rightAreaBtnWarp ~ div td:first-child > div a,
+#frm[action="/cgi-bin/compose_send"] #rightAreaBtnWarp ~ div td:first-child > div span {
     display: inline-block;
-    padding: 5px 10px !important;
+    padding: 4px 10px !important;
     background: var(--btn-secondary-background);
     color: var(--btn-secondary-text-color);
     margin: 0;
   }
-  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #rightAreaBtnWarp ~ div table.i td [clss=f_family] {
+  #frm[action="/cgi-bin/compose_send"] #rightAreaBtnWarp ~ div tbody > tr > td:first-child {
+    padding: 5px;
+  }
+  #frm[action="/cgi-bin/compose_send"] #rightAreaBtnWarp ~ div tbody > tr > td:first-child > div {
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+  }
+  #frm[action="/cgi-bin/compose_send"] #rightAreaBtnWarp ~ div > div:first-child:not([style*="68px"]) {
     display: none !important;
   }
-  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #addrQzone ~ table.i tr:first-child {
+  #frm[action="/cgi-bin/compose_send"] #rightAreaBtnWarp ~ div > div[style*="68px"] {
+    margin: 0 0 0 5px !important;
+  }
+  #frm[action="/cgi-bin/compose_send"] #rightAreaBtnWarp ~ div > table.i {
+    border: 1px solid var(--panel-white-border-color);
+    margin-top: -1px !important;
+    margin-bottom: -1px !important;
+    margin-left: 0px !important;
+    border-left: 0;
+  }
+  #frm[action="/cgi-bin/compose_send"] #rightAreaBtnWarp ~ div #trTO {
+    margin-bottom: 0 !important;
+    border-bottom: 1px solid var(--panel-white-border-color);
+    border-right: 1px solid var(--panel-white-border-color);
+  }
+  #frm[action="/cgi-bin/compose_send"] #rightAreaBtnWarp ~ div #trCC {
+    margin-bottom: 0 !important;
+    border-bottom: 1px solid var(--panel-white-border-color);
+    border-right: 1px solid var(--panel-white-border-color);
+  }
+  #frm[action="/cgi-bin/compose_send"] #rightAreaBtnWarp ~ div #trBCC {
+    margin-bottom: 0 !important;
+    border-bottom: 1px solid var(--panel-white-border-color);
+    border-right: 1px solid var(--panel-white-border-color);
+  }
+  #frm[action="/cgi-bin/compose_send"] #rightAreaBtnWarp ~ div #trSC {
+    margin-bottom: 0 !important;
+    border-bottom: 1px solid var(--panel-white-border-color);
+    border-right: 1px solid var(--panel-white-border-color);
+  }
+  #frm[action="/cgi-bin/compose_send"] #addrQzone ~ table.i tr:first-child {
     display: none;
   }
-  #frm[action="/cgi-bin/compose_send"] #sendtimepadding .addr_base {
+  #frm[action="/cgi-bin/compose_send"] .addr_base {
     height: 17px;
-    margin: 1px;
     line-height: 16px;
-    padding: 10px;
+    padding: 5px !important;
+    margin: 5px !important;
   }
-  #frm[action="/cgi-bin/compose_send"] #sendtimepadding .addr_text {
+
+  .addr_text {
     float: none !important;
-    height: 40px;
+    height: 36px;
     margin: 0;
-    line-height: 40px;
+    line-height: 36px;
   }
-  #frm[action="/cgi-bin/compose_send"] #sendtimepadding .addr_text input {
-    height: 39px;
+  .addr_text input {
+    height: 36px;
     padding: 0;
-    line-height: 39px;
+    line-height: 36px;
   }
-  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #addrOper {
-    padding: 10px;
-    border: 1px solid var(--panel-white-border-color);
+
+  #addrOper {
+    padding: 5px;
+    border-right: 1px solid var(--panel-white-border-color);
+    height: 30px;
+    display: flex;
+    align-items: center;
   }
-  #frm[action="/cgi-bin/compose_send"] #sendtimepadding #addrOper .input_title {
-    margin: 0 0 0 65px;
-  }
-  #frm[action="/cgi-bin/compose_send"] #sendtimepadding > .input_title {
-    padding: 10px 10px 10px 75px !important;
+  #addrOper > .input_title {
+    padding: 0 0 0 75px !important;
     margin: 0;
-    border-left: 1px solid var(--panel-white-border-color);
+    display: flex;
   }
-  #frm[action="/cgi-bin/compose_send"] #QMEditorArea {
-    margin-left: -73px;
-    margin-top: -2px;
-    margin-bottom: -2px;
-    border: 1px solid var(--panel-white-border-color);
-    border-right: 0;
+
+  #encrypt_mail_tips + div {
+    position: relative;
+  }
+  #encrypt_mail_tips + div > table > tbody > tr > td:first-child {
+    display: none;
   }
 
   .qmEditorBase {
     border: 0px;
   }
 
-  .qmEditorIfrmEditArea {
-    border: 0px;
-  }
-
   .qmEditorContent {
     height: unset !important;
+    position: relative;
   }
 
   .qmEditorToolBarDiv {
