@@ -3,7 +3,7 @@
 @name:zh-CN     QQ 邮箱简洁风
 @name           FlatQQMail   
 @namespace      github.com/benzbrake/FlatQQMail
-@version        2.0.7
+@version        2.0.8
 @description:zh-CN QQ 邮箱个性化样式
 @description    Persnal Style For QQMail
 @author         Ryan
@@ -722,6 +722,7 @@ table.F {
   body[module=qmReadMail] {
     margin: 0 !important;
     padding: 0 !important;
+    overflow-x: hidden;
   }
   body[module=qmReadMail] #qqmail_mailcontainer {
     margin-top: 0;
@@ -1421,7 +1422,7 @@ body.ft_l_body .ft_l_wrapper a.button_gray_f {
     margin-top: calc(var(--toolbar-height) + 5px) !important;
   }
 }
-@-moz-document regexp("https?:\\/\\/mail\\.qq\\.com\\/cgi-bin\\/frame_html\\?t=newwin_frame.*") {
+@-moz-document regexp("https?:\\/\\/mail\\.qq\\.com\\/cgi-bin\\/frame_html\\?.*t=newwin_frame.*") {
   #mainFrameContainer {
     margin: 0;
     top: 0;

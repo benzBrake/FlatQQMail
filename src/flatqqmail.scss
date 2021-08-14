@@ -2,7 +2,7 @@
 @name:zh-CN     QQ 邮箱简洁风
 @name           FlatQQMail   
 @namespace      github.com/benzbrake/FlatQQMail
-@version        2.0.7
+@version        2.0.8
 @description:zh-CN QQ 邮箱个性化样式
 @description    Persnal Style For QQMail
 @author         Ryan
@@ -13,7 +13,6 @@
 ==/UserStyle== */
 
 @namespace url(http://www.w3.org/1999/xhtml);
-
 @-moz-document domain("mail.qq.com") {
     html {
         --main-color: #0078d4;
@@ -66,11 +65,9 @@
         --icon-less: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAS0lEQVQ4jWNgGAU0BqVXDRhKrxqQr7n8ynuG8ivvSTcEprniyn6Giiv7STMEWXPBeQEGBgYG0gyB2QrTjC5OEBScF8DQjCw3CqgPABPcMBAhyIGPAAAAAElFTkSuQmCC);
         --icon-ok: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAxklEQVQ4jbWTQQ3DMAxFP4RCKIRCKIRCGARf6uRYBoMwCIVQCJES51wIgbDdtqZxs2jSLPkUvW9/2wH+EuQ6zHEAC8GGBTaMINe1wTaMMOJg5VmkkXsdZiEYSSr8EXEXlV3/Fa52YuXRBL/T9WeBvVIxgf2UFWE/nQWO0A4rWw77W24xLLnA8dFIArkOJq5gIcxxKOfjb+cONnXaKqxZYCF1Zfpsdv2wrg6oyDDWbuFaxEgCC+lwaWfLrJi4lrtvieZP9GO8ALgCKoREiWXrAAAAAElFTkSuQmCC);
     }
-
     body {
         padding: 0;
     }
-
     /** Set Font Size */
     body,
     td,
@@ -80,12 +77,10 @@
     .f_size {
         font-size: 14px;
     }
-
     /** Remove border radius */
     * {
         border-radius: 0 !important;
     }
-
     a,
     a:link {
         outline: 0;
@@ -93,17 +88,14 @@
         text-decoration: none;
         transition: all .156s linear;
     }
-
     img[src^="/cgi-bin/readtemplate"] {
         display: none;
     }
-
     /** Error Message */
     .errmsg {
         background: var(--panel-background-color);
         color: var(--panel-text-color);
     }
-
     /** Button */
     /** Reset Gray Button Style */
     .btn_gray,
@@ -116,16 +108,13 @@
         padding: 4px !important;
         cursor: pointer !important;
     }
-
     .currpage a.btn_gray {
         color: var(--btn-text-color) !important;
         font-weight: bold;
     }
-
     .left .btn_gray {
         padding: 4px 15px 4px 5px !important;
     }
-
     /** Reset Gray Button hover/active/focus Style */
     .btn_gray:hover,
     .btn_gray:active,
@@ -137,7 +126,6 @@
         border-color: var(--btn-border-color);
         box-shadow: unset;
     }
-
     /** Reset Primary Button Style */
     .btn_primary,
     .qui_btn_Blue,
@@ -150,7 +138,6 @@
         border-radius: 2px;
         transition: all .156s linear;
     }
-
     .btn_primary:hover,
     .btn_primary:active,
     .btn_primary:focus,
@@ -162,19 +149,16 @@
     .btn_blue:focus {
         background: var(--btn-primary-hover-background) !important;
     }
-
     #composeExitAlert_QMDialog_btn_not_exit:hover {
         border-color: red;
         background-color: red;
         color: white !important;
     }
-
     #composeExitAlert_QMDialog_btn_exit_save:hover {
         border-color: var(--btn-primary-background);
         background: var(--btn-primary-background);
         color: var(--btn-primary-text-color) !important;
     }
-
     input.txt,
     input.txt2,
     textarea.txt,
@@ -182,21 +166,17 @@
     .qm_txt {
         border: 1px solid var(--panel-white-border-color);
     }
-
     .dialog_operate {
         background: var(--panel-white-background-color);
     }
-
     /* Popup */
     .qmpanel_shadow {
         box-shadow: 0 .5rem 4rem rgba(0, 0, 0, .11), 0 10px 20px rgba(0, 0, 0, .05), 0 2px 3px rgba(0, 0, 0, .06);
     }
-
     .menu_item_high {
         background: var(--main-color);
         color: var(--main-text-color);
     }
-
     @import "_navbar.scss";
     @import "_sidebar.scss";
     @import "_main.scss";
@@ -210,7 +190,7 @@
     @import "_contacts.scss";
 }
 
-@-moz-document regexp("https?:\\/\\/mail\\.qq\\.com\\/cgi-bin\\/frame_html\\?t=newwin_frame.*") {
+@-moz-document regexp("https?:\\/\\/mail\\.qq\\.com\\/cgi-bin\\/frame_html\\?.*t=newwin_frame.*") {
     #mainFrameContainer {
         margin: 0;
         top: 0;
@@ -231,12 +211,10 @@ regexp("https?:\\/\\/mail\\.qq\\.com\\/cgi-bin\\/loginpage.*") {
         bottom: 0;
         overflow: hidden;
     }
-
     .header,
     .footer {
         display: none;
     }
-
     .container {
         height: 100%;
         position: absolute;
@@ -249,29 +227,24 @@ regexp("https?:\\/\\/mail\\.qq\\.com\\/cgi-bin\\/loginpage.*") {
         align-items: center;
         background-color: rgba(0, 0, 0, .3);
     }
-
     .content {
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-
         .content_wrapper {
             display: flex;
             justify-content: center;
             align-items: center;
         }
-
         .login_pictures {
             display: none;
         }
-
         .logout_info {
             padding: 20px;
             background: rgba(255, 255, 255, .75);
             border-radius: 5px !important;
         }
-
         .logout_ad {
             display: none !important;
         }
